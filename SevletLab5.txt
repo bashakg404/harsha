@@ -1,0 +1,401 @@
+LAB5
+=================================================================
+
+INDEX.html
+------------------------
+<html><body>
+<h1>THIS IS INDEX HTML</h1>
+<form action="hello.jlc">
+<h2>ENTER NAME</h2>
+<input type="text" name="fname"/>
+<br /><input type="submit" value="Hello TEST" />
+</form>
+<form action="hai.jlc">
+<h2>Enter Phone</h2>
+<input type="text" name="phone"/>
+<br /><input type="submit" value="Hai TEST"/>
+</form>
+</body></html>
+
+HelloServlet.java
+--------------------------
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class HelloServlet extends HttpServlet{
+ServerConfig cfg=null;
+@Override
+public void init(ServletConfig cfg) throws
+ServletException{
+this.cfg=cfg;
+System.out.println("**init() method of HelloServlet**");
+}
+protected void service(HttpServletRequest req, HttpServletResponse res)
+throws ServletException, IOException{
+System.out.println("**service() method of HelloServlet**");
+String fnm=req.getParameter("fname");
+String phn=req.getParameter("Phone");
+Writer out=res.getWriter();
+res.setContentType("text/html");
+out.write("<h1> Response from HelloServlet");
+out.write("<hr/> Request Parameters");
+out.write("<br/> Fname:" + fnm);
+out.write("<br/> Phone:" + phn);
+out.write("<hr> Servlet Config Parameteers");
+String eml=cfg.getInitParameter("email");
+out.write("<br/>" +cfg);
+out.write("<br/>Email:" + eml);
+out.write("<hr/> Servlet Context Parameters");
+ServletContext ctx=cfg.getServletContext();
+String web=ctx.getServletContext();
+String web=ctx.getIntParameter("website");
+out.write("<br/>" + ctx);
+out.write("<br/>Web:" +Web);
+}}
+
+HaiServlet.java
+-----------------------
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+public class HelloServlet extends HttpServlet{
+ServerConfig cfg=null;
+@Override
+public void init(ServletConfig cfg) throws
+ServletException{
+System.out.println("**service() method of HaiServlet**");
+String fnm=req.getParameter("fname");
+String phn=req.getParameter("Phone");
+Writer out=res.getWriter();
+res.setContentType("text/html");
+out.write("<h1> Response from HaiServlet");
+out.write("<hr/> Request Parameters");
+out.write("<br/> Fname:" + fnm);
+out.write("<br/> Phone:" + phn);
+out.write("<hr> Servlet Config Parameteers");
+ServletConfig cfg=getServletConfig()
+String eml=cfg.getInitParameter("email");
+out.write("<br/>" +cfg);
+out.write("<br/>Email:" + eml);
+out.write("<hr/> Servlet Context Parameters");
+ServletContext ctx=cfg.getServletContext();
+String web=ctx.getServletContext();
+String web=ctx.getIntParameter("website");
+out.write("<br/>" + ctx);
+out.write("<br/>Web:" +Web);
+}}
+
+
+LAB6
+=================================================================================
+HelloServlet.java
+-----------------------
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebInitParam;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+@WebServlet{
+name="helloServ",
+urlPatterns={"/hello.jlc"),
+initParams={
+@WebInitParam{
+name="email",
+value=hellosri@jlc.com
+}}}
+public class HelloServlet extends HttpServlet{
+
+////
+
+}
+
+HaiServlet.java
+-----------------------
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebInitParam;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+@WebServlet{
+name="haiServ",
+urlPatterns={"/hai.jlc"),
+initParams={
+@WebInitParam{
+name="email",
+value=haisri@jlc.com
+}}}
+public class HelloServlet extends HttpServlet{
+
+////
+
+}
+
+
+LAB7
+=========================================================================
+LOGIN.html
+---------------
+<html><body>
+<form action='login.jlc'>
+<table align='center'>
+<tr><td colspan='2' align='center'>
+<h1>Account Login</h1></td>
+<tr> <td><h2>Username</h2></td>
+<td><input type='text' name='uname'/> </td> </tr>
+<tr> <td><h2> Password</h2></td>
+<td><input type='password' name='password'/>
+</td>
+</tr>
+<tr> <td colspan='2' align='center'>
+<input type='submit' value='Login'/></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+
+/WEB-INF/home.html
+------------------------
+<html><body>
+<table align='center'>
+<tr><td align='center'>
+<font color='green' size="5" face="Cambria"> Login Success<br/>Welcome to JLC Page</font>
+</td>
+</tr>
+</table>
+</body>
+</html>
+
+LoginServlet.java
+----------------------------
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+public class HelloServlet extends HttpServlet{
+protected void service(HttpServletRequest req, HttpServletResponse res)
+throws SevletException, IOException{
+System.out.println("**service of TestServlet");
+String unm=req.getParameter("uname");
+String pwd=req.getParameter("password");
+Writer out=res.getWriter();
+out.write("<h1>Hi, Welcome to JLC");
+String page="";
+if(unm.equals(pwd)){
+page="/WEB-INF/home.html";
+RequestDispatcher rd=req.getRequestDispatcher(page);
+rd.forward(req, res);
+}else{
+page="/WEB-INF/error.html";
+RequestDispatcher rd=req.getRequestDispatcher(page);
+rd.forward(req, res);
+}
+out.write("<h1>Again, Welcome to JLC");
+System.out.println("**service completed-LAST STATEMENT**");
+}}
+
+LAB8
+===========================================================================================
+1 header.html
+---------------
+<html> <body>
+<h1 align="center"> Java Learning Center</h1>
+</body></html>
+
+2 home.html
+---------------
+<html><body>
+<h1 align="center"> Java Learning Center</h1>
+</body> </body> </html>
+
+3 footer.html
+---------------
+<html><body>
+<h3 align="center">All rights Reserved</h3>
+</body></html>
+
+4 index.html
+-----------------
+<html><body>
+<a align="hello.jlc">TEST INCLUDE</a>
+</h1></body></html>
+
+HelloServlet.jav
+----------------------
+package com.jlcindia.servlets;
+import java.io.IOException;
+import java.io.Writer;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class HelloServlet extends HttpServlet{
+protected void service(HttpServletRequest req, HttpServletResponse res)
+throws SevletException, IOException{
+
+RequestDispatcher rd1=
+req.getRequestDispatcher("header.html");
+rd1.include(req, res);
+
+RequestDispatcher rd2=
+req.getRequestDispatcher("header.html");
+rd2.include(req, res);
+
+RequestDispatcher rd3=
+req.getRequestDispatcher("header.html");
+rd3.include(req, res);
+}}
+
+LAB9
+==============================================================================
+1 index.html
+--------------
+<html><body>
+<form action="redirect.jlc">
+<h1> Enter URL</h1><br/>
+<input type="text" name="page"/><br/><br/>
+<input type="submit" value="Submit"/>
+</form></body></html>
+
+2 home.html
+----------------
+<h2>  Redirect Example
+<br/>Check the URL in Browser</h2>
+<hr/>>center><h1>HOME PAGE</h1></center>
+
+3 error.html
+-------------------
+<h2> Reedirect Example
+<br/> Check the URL in Browser</h2>
+<hr/><center><font color="red" size="5">
+Provide the URL/page name</font></center>
+
+4 RedirectServlet.java
+-----------------------
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class HelloServlet extends HttpServlet{
+protected void service(HttpServletRequest request, HttpServletResponse response)
+throws SevletException, IOException{
+String page=request.getParameter("page")
+if (page==null || page.trim().length()==0){
+RequestDispatcher rd=null;
+rd=request.getRequestDispatcher("error.html");
+rd.forward(request, response);
+return;
+}
+if(page.startsWith("www")){
+page="http://"+ page;
+}
+response.sendRedirect(page);
+}}
+
+LAB10
+===================================================================
+1 index.html
+------------------
+<html><body>
+<center><h1><Response & Response 
+Example</h1></center>
+<form action="test.jlc" method="POST">
+<h2>Enter Uname</h2>
+<br/><input type="text" name="uname"/>
+<h2>Enter Password</h2>
+<input type="password" name="password"/>
+<br/><input type="submit" value="Test"/>
+</form></body></html>
+
+2 TestServlet.java
+----------------------
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class HelloServlet extends HttpServlet{
+protected void service(HttpServletRequest req, HttpServletResponse res)
+throws SevletException, IOException{
+
+//Request Parameters
+
+String unm=req.getParameter("uname");
+String pwd=req.getParameter("password");
+
+//Display request parameters
+
+PrintWriter out=res.getWriter();
+out.println("<h1> Username:" + un);
+out.println("<br/> Password:" + pw);
+out.println("<hr/>");
+out.println("Request Headers");
+
+//Request Headers
+
+Enumeration e=req.getHeaderNames();
+while(e.hasMoreElements()){
+String hn=e.nextElemennt().toString();
+String hv=req.getHeader(hn);
+out.println("<br/>" +hn+" : "+ hv);
+}
+out.println("<hr/>");
+out.println("Local Info");
+
+//Locales Supported by Browsers
+
+out.println("<br/> req.getLocale():" + req.getLocale());
+out.println("<hr/>");
+out.println("Other Info");
+
+//Other Information From Request
+
+out.println("<br/> METHOD:" + req.getMethod());
+out.println("<br/> Request URI:" + req.getRequestURI());
+out.println("<br/> Request URL:" + req.getRequest URL());
+out.println("<br/> Protocol:" + req.getProtocol());
+out.println("<br/> Content Len:" + req.getContentLength());
+out.println("<br/> Content Type:" + req.getContentType());
+out.println("<br/> Remote Addr:" + req.getRemoteAddr());
+out.println("<br/> Remote Port:" + req.getRemotePort());
+out.println("<br/> Remote Host:" + req.getRemoteHost());
+out.println("<br/> Server Port:" + req.getServerPort());
+out.println("<br/> Server Name:" + req.getServerName());
+out.println("<br/> QueryString():" + req.getQueryString());
+out.println("<br/> req.getServletPath():" + req.getServletPath());
+out.println("<br/> req.getContextPath:" + req.getContextPath());
+}}
+
+LAB11
+==========================================
+1 index.html
+----------------
+<html>
+<body>
+<h1>
+<a href="test.jlc">SEND REQUEST</a>
+</h1>
+</body>
+</html>
+
+2 TestServlet.java
+--------------------
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class HelloServlet extends HttpServlet{
+protected void service(HttpServletRequest request, HttpServletResponse response)
+throws SevletException, IOException{
+count++;
+Syatem.out.println("---service---:"+count);
+Writer out=res.getWriter();
+Date dt=new Date();
+out.write("<h1>" + dt);
+if(count<=10){
+res.setHeader("Refresh", "1");
+}else{
+res.setHeader("Refresh", "1: URL=http://jlcindia.com");
+}}}

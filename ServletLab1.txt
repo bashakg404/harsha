@@ -1,0 +1,63 @@
+<html><body>
+<form action='login.cgi'>
+<table align='center'>
+<tr><td colspan='2' align='center'>
+<h1>Account Login</h1></td> </tr>
+</tr>
+<td><h2>Username</h2></td>
+<td><input type='text' name='username'/> </td>td>
+</tr>
+<tr>
+<td><h2>Password</h2></td>
+<td><input type='password' name='password'/>
+</td>
+</tr>
+<tr><td colspan='2' align='center'>
+<input type='submit' value='Login'/></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+-------------------------------------------------------------------------------------------------
+package com.cgiindia.servlets;
+
+import java.io.IOException;
+import java.io.Writer;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+/**
+ * Servlet implementation class LoginServlet
+ */
+public class LoginServlet extends HttpServlet {
+	protected void service(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException {
+		
+	String unm=req.getParameter("username");
+	String pwd=req.getParameter("password");
+	String msg="";
+	
+	if(unm.equals(pwd)){
+		msg="<h1>Login Success<br/>Welcome to CGI";
+	}else{
+		msg="<h1>Login Failed<br/>Invalid Username or Password";
+	}
+	
+	Writer out=res.getWriter();
+	out.write(msg);
+	}
+}
+	
+    ----------------------------------------------------------------------------------------------------
+
+<web-app>
+<servlet>
+<servlet-name>myLogin</servlet-name>
+<servlet-class>com.cgiindia.servlets.LoginServlet</servlet-class>
+</servlet>
+  <servlet-mapping>
+  <servlet-name>myLogin</servlet-name>
+  <url-pattern>/login.cgi</url-pattern>
+  </servlet-mapping>
+</web-app>

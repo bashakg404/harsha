@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/bashasab.gudimani/Desktop/Hibernate mandJarsAnil/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bashasab.gudimani/Desktop/Hibernate mandJarsAnil/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bashasab.gudimani/Desktop/Hibernate mandJarsAnil/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bashasab.gudimani/Desktop/Hibernate mandJarsAnil/apache-collections-commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bashasab.gudimani/Desktop/Hibernate mandJarsAnil/jta-1_1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bashasab.gudimani/Desktop/Hibernate mandJarsAnil/slf4j-api-1.5.6-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bashasab.gudimani/Desktop/Hibernate mandJarsAnil/slf4j-simple-1.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bashasab.gudimani/Desktop/Hibernate mandJarsAnil/mysql-connector-java-5.1.18.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,36 @@
+-->Collections interface is the most important concept in Java it will help programmer to manipulate the Data
+	Collection has Root interface with the basic methods like add(), remove(), addAll(), removeAll(), contains(), isEmpty()...etc
+
+	There are Three Major type
+	1)List
+	2)Set
+	3)Map
+
+LIST-->It can contain Duplicate values and elements are ordered.
+	   Implementations are LinkedList, ArrayList
+
+SET-->Doesn't allow Duplicates
+		Implementations are HashSet, TreeSet(Treeset maintains sorted order)
+
+MAP-->Doesn't allow duplicates. Contain key value pairs.
+		Implementations are HashMap TreeMap(TreeMap Implements sorted order)
+		
+		Major Differencce between Set List and Map
+		
+Duplicate:: List allows duplicates and Set will not allow duplicates. 
+			While map hold two entry for object key and values.
+			Values may contain duplicate but keys are always unique.	
+			
+Order:: List maintains the order. While Set will not maintain any order.
+		LinkedHashSet, TreeSet maintains the order, imposed by comparator or comparable
+
+Null:: List allows many null elements. Where Set can have only one null element.
+	   In map you can have null values but atmost u can have only one null key.
+	   
+	   When to use SET LIST and MAP
+	   
+--> If you want to access the elements frequently List is way to go.
+-->If you want to store the elements and want them to maintain order the u can use Set.
+-->If you don't want any duplicate elements use Set.
+
+	

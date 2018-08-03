@@ -1,0 +1,5 @@
+127.0.0.1 - - [20/Apr/2017:15:39:21 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [20/Apr/2017:15:39:26 +0530] "GET /01HoneyWellBank/ HTTP/1.1" 404 983
+0:0:0:0:0:0:0:1 - - [20/Apr/2017:15:40:14 +0530] "GET /01HoneyWellBank/WEB-INF/web.xml HTTP/1.1" 404 949
+0:0:0:0:0:0:0:1 - - [20/Apr/2017:15:40:43 +0530] "GET /01HoneyWellBank/jsp/signin.jsp HTTP/1.1" 200 733
+0:0:0:0:0:0:0:1 - - [20/Apr/2017:15:40:55 +0530] "POST /01HoneyWellBank/jsp/finalsignin.do HTTP/1.1" 200 -

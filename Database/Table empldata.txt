@@ -1,0 +1,12 @@
+insert into empldata values('CP101', 'Basha', 'basha@cgi.com', 25000, 'BLR');
+insert into empldata values('CP102', 'Arvind', 'arvind@cgi.com', 35000, 'BLR');
+insert into empldata values('CP103', 'Shiva', 'shiva@cgi.com', 45000, 'BLR');
+insert into empldata values('CP104', 'Varun', 'varun@cgi.com', 55000, 'BLR');
+insert into empldata values('MH201', 'Anil', 'anil@cgi.com', 43000, 'MHA');
+insert into empldata values('MH202', 'Anirudh', 'anirudh@cgi.com', 54000, 'MHA');
+insert into empldata values('MH203', 'Tarun', 'tarun@cgi.com', 67000, 'MHA');
+insert into empldata values('MH204', 'Fayaz', 'fayz@cgi.com', 75000, 'MHA');
+insert into empldata values('CH301', 'Arun', 'arun@cgi.com', 26000, 'CHN');
+insert into empldata values('CH302', 'Prashant', 'prashant@cgi.com', 44000, 'CHN');
+insert into empldata values('CH303', 'Siva', 'siva@cgi.com', 59000, 'CHN');
+insert into empldata values('CH304', 'Thomas', 'thomas@cgi.com', 39000, 'CHN');

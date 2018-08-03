@@ -1,0 +1,30 @@
+--> Thread has its own Stack ie, if main calls method it both main and method will be in same stack.
+   But if method calls Thread thread will create its own stack
+
+--> Two ways to create the thread 1.Implement Runnable 2. Extending Thread class
+
+--> When you create thread using implement runnable, same object is shared amongest multiple threads also only  related features will
+   be inherited
+   
+--> When you create Thread by extending Thread class all the thread class features will be inherited. So unleass you really want to 
+   modify fundamental behaviour dont use this method.
+ 
+--> When you call Start() method it will call run() method internally to start newly created method
+
+--> When you call run() method, main thread rather starting new thread it will start run() method itself.
+
+--> Once thread is execute you cant start it again.
+
+--> Deadlock means both threads are waiting for same lock(object or class)
+
+--> Sleep() method causes current thread to sleep form specified number of time, When thread is in sleep mode it will move from running
+   to waiting state.
+
+--> When one or more thread try to access same resource without synchronization it cases race condition
+  
+--> Synchronization is very important method in threading it uses locking mechanism to run the specific thread.
+
+--> Synchronization is used to overcome from race condition
+
+--> Join Method is important method in Multithreading it will ensure all the threads that started from main must end in order in which 
+    they started and also main should end last

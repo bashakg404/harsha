@@ -1,0 +1,38 @@
+spring-core: this is the core module of the Spring framework; it should be used in any Spring-based application.
+
+spring-web, spring-webmvc: these are the web modules which allow you to create either REST resources or standard controllers.
+
+jackson-databind: this library provides implicit conversion between JSON and POJO classes. 
+When this library is imported into pom.xml, 
+you don't have to worry about converting JSON requests into POJO or POJO responses into JSON; 
+this is fully handled implicitly by this library. 
+In case you're interested in XML data type, then use jackson-xml-databind.
+
+
+Following are the common annotations used by our controller:
+
+@RestController: this annotation marks the class as a Resource, 
+it defines implicitly both @Controller and @ResponseBody MVC annotations, 
+when annotating a class with @RestController, 
+it's not necessary to write @ResponseBody beside the POJO classes returned from your methods.
+
+@RequestMapping: this annotation defines the url of the resource in addition to the method type: GET/POST, 
+in our example we expose the payment service as POST which is accessed through /payment/pay.
+
+@RequestParam: this annotation represents a specific request parameter, 
+in our example, we map a request parameter called key to an argument key of type String.
+
+@RequestBody: this annotation represents the body of the request, in our example, 
+we map the body of the request to a POJO class of type PaymentRequest(Jackson handles the JSON/POJO conversion).
+
+As noticed the response is represented as BaseResponse and there is no need to annotate it, 
+Jackson converts it implicitly to JSON.
+
+Basically, we need to create two classes:
+
+ApplicationInitializer: this is an initializer class which is loaded at the startup of the application, 
+it defines the configuration class of the application along with the context url.
+
+ApplicationConfiguration: this is the configuration class of the application, 
+it is basically used to instruct the servlet container to load REST resources from a specific package.
+

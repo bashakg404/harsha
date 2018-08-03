@@ -1,0 +1,88 @@
+
+
+<web-app>
+
+
+	<welcome-file-list>
+
+		<welcome-file>index.jsp</welcome-file>
+
+	</welcome-file-list>
+
+
+	<servlet>
+
+		<servlet-name>searchServlet</servlet-name>
+
+		<servlet-class>com.sessionmandemo.servlets.SearchBookServlet
+		</servlet-class>
+
+	</servlet>
+
+
+	<servlet-mapping>
+
+		<servlet-name>searchServlet</servlet-name>
+
+		<url-pattern>/searchbooks.jlc</url-pattern>
+
+	</servlet-mapping>
+
+
+	<servlet>
+
+		<servlet-name>addToCartServlet</servlet-name>
+
+		<servlet-class>com.sessionmandemo.servlets.AddToCartServlet
+		</servlet-class>
+
+	</servlet>
+
+
+	<servlet-mapping>
+
+		<servlet-name>addToCartServlet</servlet-name>
+
+		<url-pattern>/addtocart.jlc</url-pattern>
+
+	</servlet-mapping>
+
+
+	<servlet>
+
+		<servlet-name>showCartServlet</servlet-name>
+
+		<servlet-class>com.sessionmandemo.servlets.ShowCartServlet
+		</servlet-class>
+
+	</servlet>
+
+
+	<servlet-mapping>
+
+		<servlet-name>showCartServlet</servlet-name>
+
+		<url-pattern>/showcart.jlc</url-pattern>
+
+	</servlet-mapping>
+
+
+	<servlet>
+
+		<servlet-name>removeFromCart</servlet-name>
+
+		<servlet-class>com.sessionmandemo.servlets.RemoveFromCartServlet
+		</servlet-class>
+
+	</servlet>
+
+
+	<servlet-mapping>
+
+		<servlet-name>removeFromCart</servlet-name>
+
+		<url-pattern>/removefromcart.jlc</url-pattern>
+
+	</servlet-mapping>
+
+</web-app>

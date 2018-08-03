@@ -1,0 +1,11 @@
+--> Exception is an event that will disturb normal flow of execution.
+
+--> Checked exception are compile time exceptions, these must have handled using try catch.
+
+--> Unchecked exceptions are run time exceptions.
+
+--> Throw is key word and it will be compile time exception. it allows us to throw checked and unchecked exceptions.
+
+--> Throws will be method level exception. And it is defined in method sign.
+
+--> Finally block will always executed code irrespective of exception. 

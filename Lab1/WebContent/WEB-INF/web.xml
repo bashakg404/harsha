@@ -1,0 +1,11 @@
+<web-app>
+	
+	<servlet>
+		<servlet-name>myLogin</servlet-name>
+		<servlet-class>com.cgiindia.servlets.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myLogin</servlet-name>
+		<url-pattern>/login.cgi</url-pattern>
+	</servlet-mapping>
+</web-app>

@@ -1,0 +1,12 @@
+<web-app>
+	<Welcome-file-list>index.jsp</Welcome-file-list>
+	<servlet>
+		<servlet-name>test</servlet-name>
+		<servlet-class>com.pagesessreqappl.servlets.TestServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>test</servlet-name>
+		<url-pattern>/test.jlc</url-pattern>
+	</servlet-mapping>
+</web-app>

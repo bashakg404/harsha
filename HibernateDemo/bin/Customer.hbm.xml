@@ -1,0 +1,13 @@
+<hibernate-mapping package="com.cgiindia.hibernate">
+	<class name="Customer" table="customers">
+		<id name="cid" column="cid" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="cname" />
+		<property name="email" column="email" />
+		<property name="phone" column="phone" type="long" />
+		<property name="city" column="city" type="string" />
+		<property name="balance" column="balance" type="double" />
+
+	</class>
+</hibernate-mapping>

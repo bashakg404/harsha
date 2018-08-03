@@ -1,0 +1,6 @@
+<%@ taglib prefix="cgi" uri="http://cgiindia.com/ctag"%>
+<html><body> CUSTOM TAG EXAMPLE <br/>
+<cgi:showMessage ename="basha" email="basha@cgi.com"/>
+<hr/><cgi:showMessage ename="harsha"/>
+<hr>/<cgi:showMessage sname=""/>
+</body></html>

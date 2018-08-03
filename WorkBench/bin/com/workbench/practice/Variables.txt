@@ -1,0 +1,31 @@
+There are two types of variables
+1. Static
+2. Instance
+
+Static variables will initialize at the time of class creation.
+Static variables makes memory efficient. Becuase it will load once in class.
+Java Static variables is shared to all the objects.
+Instance variables will be initialized at the time of object creation.
+Instance variables will occupy memory each time you create the object.
+
+
+There are two types of Methods
+1. Static method
+2. Instance Method
+
+Static method is belongs to class rather than object.
+Static method will be invoked at the time of class creation only 
+Static method can access static variablles and can change the value of it.
+There are two restriction in static method
+Static method cannot use non static data member or call non static method directly.
+This and Super cannot be used in static context.Because This is reference of the current object and Super is used to referred
+immediate parent object.
+
+Instance methods will invoke at the time of object creation
+
+THIS Keyword
+Its a reference variable. It refers to the current object.
+It can used to refer current class object.
+It used to invoke current class method implicitly
+It used to invoke current class constructor
+

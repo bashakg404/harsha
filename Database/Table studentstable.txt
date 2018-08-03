@@ -1,0 +1,8 @@
+create table studentstable(sid int, sname char(15), course char(15), totfee int, feepaid int, feebal int, branch char(15), city char(15));
+insert into studentstable values(1, 'basha', 'corejava', 14000, 8000, 6000, 'MKR', 'Blore');
+insert into studentstable values(2, 'avi', 'android', 1000, 8000, 2000, 'BTM', 'Pune');
+insert into studentstable values(3, 'katla', 'servlet', 5000, 2000, 3000, 'MHA', 'Chn');
+insert into studentstable values(4, 'harsha', 'jsp', 7000, 4500, 3500, 'MKR', 'Pune');
+insert into studentstable values(5, 'kotresh', 'jdbc', 12000, 2000, 10000, 'BTM', 'Blore');
+insert into studentstable values(6, 'pavan', 'hibernate', 9000, 8000, 1000, 'MHA', 'Chn');
+insert into studentstable values(7, 'swami', 'springs', 7500, 3500, 4000, 'BTM', 'Blore');

@@ -1,0 +1,8 @@
+   Method Overloading											  Method Overriding
+->It happens in Compile time									->It happens in Runtime
+->Static methods can be overloaded								->Static methods cannot be overriden
+->Overloading is being done in same class						->Overriding is being done in child parent classes
+->Use to extend the operations									->Use to reuse the code
+->Return type methods Doesn't matter, it can be same or diff    ->return type should be specific
+->Argument should be diff										->Argument should be same	
+	

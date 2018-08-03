@@ -1,0 +1,25 @@
+Inheritance
+
+Inheritance is used to reuse the fields that are used in main class. That means super class fields can be used in subclass
+It is also used to override the methods.
+It is used to achieve code reusability.
+For example you have class A and Class B extends class A. if we create one object B we can access both the variables defined
+in both the classes that is called code reusability.
+
+Types
+Single(Class B extends A)
+Multilevel(Class B extends A, Class C extends B)
+Hierarchical
+Multiple inheritance is not supported in java.
+
+
+SUPER KeyWord
+
+Its is used refer immediate parent class Variable, Method and Constructor
+
+Final KeyWord
+Its is used to restrict the user(Stop Value Change, Stop Override method, Stop Inheritance)
+You Can inherit the final method but you cant override it.
+ 
+
+

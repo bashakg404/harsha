@@ -1,0 +1,30 @@
+<web-app>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>demoServlet</servlet-name>
+		<servlet-class>com.filterdemo.servlets.DemoServlet</servlet-class>
+		<init-param>
+			<param-name>city</param-name>
+			<param-value>Chennai</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>demoServlet</servlet-name>
+		<url-pattern>/demo.jlc</url-pattern>
+	</servlet-mapping>
+	<filter>
+		<filter-name>demoFilter</filter-name>
+		<filter-class>com.filterdemo.servlets.DemoFilter</filter-class>
+		<init-param>
+			<param-name>city</param-name>
+			<param-value>Bangalore</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>demoFilter</filter-name>
+		<url-pattern>/demo.jlc</url-pattern>
+	</filter-mapping>
+</web-app>

@@ -1,0 +1,41 @@
+1. Singleton design pattern will allow us to create only one instance for the class. You cant instantiate it second time.
+
+2. Steps to create singleton class
+
+-->Create class as public
+ex: public class Singleton{
+}
+    
+-->Create private constructor of that class
+ex: private Singleton(){}
+    This will prevent anybody else to instantiate the Singleton class.
+    
+-->Create private Static member this will contain the instance of the class
+ex:private static Singleton singleton;
+
+-->Create static public method
+This provides the global point of access to the Singleton object and returns the instance to the client calling class.
+
+Here is the complete class definition
+
+private class Singleton{
+
+ // Static member holds only one instance of the
+    // SingletonExample class
+private Singleton singleton;
+
+
+    // SingletonExample prevents any other class from instantiating
+private Singleton(){
+
+}
+
+ // Providing Global point of access
+public static singleton getSingleton(){
+  if (null=singleton){
+  singleton=new Singleton()
+  }
+  return singleton
+}
+
+

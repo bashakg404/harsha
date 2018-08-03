@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+  <!--  //this is for constructor injection
+    <bean id="myMatchResult"
+    		class="com.spring.cricketapp.ResultStatus" ></bean>
+    		
+   <bean id="myMatch"
+   			class="com.spring.cricketapp.Australia">
+   			<constructor-arg ref="myMatchResult"/>
+   			</bean>		 -->
+   			
+<!--    			
+Setter injection implementation
+ 	<bean id="myMatchResult"
+ 		class="com.spring.cricketapp.ResultStatus"></bean>
+ 
+    <bean id="myMatch"
+    	class="com.spring.cricketapp.Australia">
+    	<property name="resultStatus" ref="myMatchResult" />
+    	</bean> -->
+    	
+    <!-- inject the literal values -->
+    
+    <bean id="myMatchResult"	
+		class="com.spring.cricketapp.ResultStatus"></bean>  
+		
+    <bean id="myMatch"
+		class="com.spring.cricketapp.India">
+		<!-- set up setter injection -->
+		<property name="resultStatus" ref="myMatchResult"/>
+		
+		<!-- Inject literal values -->
+		<property name="indiaCoachName" value="Ravi Shashtri" />
+		<property name="indiaCricketBoardName" value="BCCI" />
+		
+		</bean>
+		
+		
+</beans>
+
+
+
+
+

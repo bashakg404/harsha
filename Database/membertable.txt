@@ -1,0 +1,7 @@
+CREATE TABLE member(memberid int(6) NOT NULL AUTO_INCREMENT, name varchar(20) DEFAULT NULL, location varchar(10) DEFAULT NULL, EXPR int(2) DEFAULT NULL, PRIMARY KEY(memberid));
+insert into member values(135401, 'ANIL', 'TPLS', 2);
+insert into member values(135402,'BASHA','CP', 3);
+insert into member values(135403,'SURI', 'ECITY', 5);
+insert into member values(135404,'AVI', 'CP', 7);
+insert into member values(135405,'PAVAN', 'TPLS', 6);
+

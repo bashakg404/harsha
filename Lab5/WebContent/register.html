@@ -1,0 +1,54 @@
+<html>
+<body>
+	<center>
+		<h1>CGI Bengaluru</h1>
+		<h2>Add Registration Form</h2>
+		<form action="register.cgi">
+			<table>
+				<tr>
+					<td>Full Name</td>
+					<td><input type="text" name="fname"/></td>
+				</tr>
+				 <tr>
+					<td>Email</td>
+					<td><input type="text" name="email" /></td>
+				</tr>
+				<tr>
+					<td>Phone</td>
+					<td><input type="text" name="phone" /></td>
+				</tr>
+				<tr>
+					<td>Gender</td>
+					<td><input type="radio" name="gender" value="Male" />Male</td>
+					<td><input type="radio" name="gender" value="Female" />Female</td>
+				</tr>
+				<tr>
+					<td>Timings</td>
+					<td><Select name="timings">
+							<option value="Select">Select</option>
+							<option value="7.00A.M-4.00P.M">7.00A.M-9.00P.M</option>
+							<option value="9.00A.M-6.00P.M">9.00A.M-6.00P.M</option>
+							<option value="11.30A.M-8.30P.M">11.00A.M-8.30P.M</option>
+					</Select></td>
+				</tr>
+				 <tr>
+					<td>Domain</td>
+					<td><input type="checkbox" name="domain" value="CITRIX" />CITRIX<br>
+						<input type="checkbox" name="domain" value="UNIX" />UNIX<br>
+						<input type="checkbox" name="domain" value="VM" />VM<br> 
+						<input  type="checkbox" name="domain" value="ACTDIR" />ACTDIR<br></td>
+				</tr>
+				
+				<tr>
+					<td>Remarks</td>
+					<td><textarea name="remarks" rows="6" ;cols="20"></textarea></td>
+				</tr>
+ 			<tr>
+					<td colspan="2" align="center"><input type="submit"
+						value="Add Register" /></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+</body>
+</html>
