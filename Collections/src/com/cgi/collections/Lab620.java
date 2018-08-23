@@ -1,7 +1,5 @@
 package com.cgi.collections;
 
-import java.util.*;
-
 public class Lab620{
 	public static void main(String[] args) {
 	/*HashSe set=new HashSe();

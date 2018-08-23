@@ -1,6 +1,6 @@
 package com.cgi.collections;
 
-import java.util.*;
+import java.util.TreeSet;
 
 public class Lab623{
 	public static void main(String[] args) {

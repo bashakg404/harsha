@@ -1,6 +1,7 @@
 package com.cgi.collections;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
 
 public class Lab603{
 	public static void main(String[] args) {

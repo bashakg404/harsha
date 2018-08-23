@@ -1,7 +1,8 @@
 
 package com.cgi.collections;
 
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Vector;
 
 public class Lab611{
 	public static void main(String[] args) {

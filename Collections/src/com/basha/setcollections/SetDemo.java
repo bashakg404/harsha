@@ -1,16 +1,17 @@
 package com.basha.setcollections;
 
 import java.util.HashSet;
-import java.util.Set;
 
 public class SetDemo {
 	
 	public static void main(String[] args){
-		Set<String> hashSet=new HashSet<String>();
+		//Set<String> hashSet=new HashSet<String>();
+		HashSet hashSet=new HashSet();
 		hashSet.add("CGI");
 		hashSet.add("Infy");
 		hashSet.add("Bosch");
 		hashSet.add("Verifone");
+		hashSet.add("CGI");//duplicate value will not be printed
 		System.out.println(hashSet);
 		
 		//isEmpty method

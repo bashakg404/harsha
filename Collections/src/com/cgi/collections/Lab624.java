@@ -1,6 +1,6 @@
 package com.cgi.collections;
 
-import java.util.*;
+import java.util.LinkedHashSet;
 
 public class Lab624{
 	public static void main(String[] args) {

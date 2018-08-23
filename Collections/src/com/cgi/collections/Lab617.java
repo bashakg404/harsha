@@ -1,6 +1,8 @@
 package com.cgi.collections;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
 
 public class Lab617{
 	public static void main(String[] args) {
