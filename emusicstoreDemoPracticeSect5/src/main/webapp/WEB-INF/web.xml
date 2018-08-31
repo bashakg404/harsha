@@ -23,6 +23,7 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
+<!-- it is configuring spring filter proxy -->
 	<filter>
 		<filter-name>springSecurityFilterChain</filter-name>
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>

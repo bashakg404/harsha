@@ -19,7 +19,7 @@ public class Lab604{
 		System.out.println(col2 + "\t" + col2.size());
 		System.out.println(col);
 		System.out.println(col2);
-		System.out.println(col.removeAll(col2));
+		System.out.println("Remove:"+col.removeAll(col2));
 		System.out.println(col);
 		System.out.println(col2);
 	}}

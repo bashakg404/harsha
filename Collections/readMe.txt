@@ -28,7 +28,7 @@ ARRAYLIST
 means then also List is a way to go.
 
 ->ArrayList and Vector classes implements RandomAccess interface so that any random element we can access with the same speed. 
-Hence ArrayList is the best choice of "retrival operation".
+Hence ArrayList is the best choice of "retrieval operation".
 
 ->Arraylist is not synchronized.
 
@@ -129,3 +129,16 @@ How Get() Method Works Internally?
 	equals() method will be used to find out the correct key.
 -->As soon as the matching key is found, get() method will return the value object stored in the Entry object.
   
+  SORT The Elements
+ 
+ -->List is the best way to sort the elements because it has one method Collections.sort()
+ -->You Cannot sort HashSet elements as by default its not maintaining any order so if you want to sort it first convert it to List
+ and then go for sort.
+ -->Even we have LinkedHashSet and TreeSet it will give you the sorted order by default.
+ 
+ COMPARATOR and COMPARABLE
+ 
+--> Comparator(Has two methods equals and compare) can be used to compare instances of different classes. 
+--> Comparable(Has One method compareTo) is implemented by class which need to define a natural ordering for its objects. 
+ 	Like String implements Comparable. 
+--> In case one wants a different sorting order then he can implement comparator and define its own way of comparing two instances.

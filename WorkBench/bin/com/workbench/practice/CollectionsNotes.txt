@@ -9,13 +9,13 @@
 LIST-->It can contain Duplicate values and elements are ordered.
 	   Implementations are LinkedList, ArrayList
 
-SET-->Doesn't allow Duplicates
+SET-->Doesn't allow Duplicates and elements are not ordered.
 		Implementations are HashSet, TreeSet(Treeset maintains sorted order)
 
 MAP-->Doesn't allow duplicates. Contain key value pairs.
 		Implementations are HashMap TreeMap(TreeMap Implements sorted order)
 		
-		Major Differencce between Set List and Map
+		Major Difference between Set List and Map
 		
 Duplicate:: List allows duplicates and Set will not allow duplicates. 
 			While map hold two entry for object key and values.

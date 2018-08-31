@@ -12,6 +12,7 @@ public class Lab600{
 		col.add("hsrsha");
 		col.add("pavan");
 		Iterator it=col.iterator();
+		
 		while(it.hasNext()){
 			Object obj=it.next();
 			System.out.println(obj);

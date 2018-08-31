@@ -38,7 +38,10 @@ class Hello {
     
 }*/
 
-	static{
+/*	static{
 		System.out.println("aa");
 		System.exit(0);
-	}}
+	}*/
+	
+	
+	}

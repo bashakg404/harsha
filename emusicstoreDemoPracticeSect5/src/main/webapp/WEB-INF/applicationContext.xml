@@ -38,7 +38,7 @@
 	</bean>
 
 	<!-- this bean is responsible for uploading the image -->
-
+ 
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="1024000" />

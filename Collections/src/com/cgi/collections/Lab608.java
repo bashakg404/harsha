@@ -16,7 +16,7 @@ public class Lab608{
 		int x= list.indexOf("nivas");
 		System.out.println(x);
 		int y=list.lastIndexOf("nivas");
-		System.out.println(x);
+		System.out.println(y);
 		
 	}}
 

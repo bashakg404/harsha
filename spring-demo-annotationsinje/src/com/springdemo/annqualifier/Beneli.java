@@ -8,7 +8,7 @@ public class Beneli implements Brands {
 	@Override
 	public String myBikeBrand() {
 		// TODO Auto-generated method stub
-		return null;
+		return "My beautyfull Beneli 600CC";
 	}
 
 }

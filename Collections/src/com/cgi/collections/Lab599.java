@@ -13,7 +13,7 @@ public class Lab599 {
 		Object arr[] = col.toArray();
 		for (int i = 0; i < arr.length; i++) {
 			System.out.println(arr[i]);
-			arr[i] = "CGI";
+			arr[i] = "CGI"; //you cant add the element while iterating
 
 		}
 		System.out.println(col);

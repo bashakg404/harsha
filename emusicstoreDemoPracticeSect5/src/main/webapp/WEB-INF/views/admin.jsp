@@ -11,6 +11,9 @@
 
 			<p class="lead">This is the Administrator Page!</p>
 		</div>
+		
+		
+		
 		<h3>
 			<a href="<c:url value="/admin/productInventory" />">Product
 				Inventory</a>

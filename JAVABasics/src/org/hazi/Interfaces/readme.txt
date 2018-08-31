@@ -6,7 +6,7 @@ methods.
 -->It is mandatory to implement all the methods defined in interface in calling class. 
 
 --> Interfaces can be used in CAN - BE relationship. like, Bird can fly and can walk so, we can implement fly interface and walk interface by
-extendinng animal class. 
+extending animal class. 
 
 -->Java internally make use of Interfaces in very well manner. 
 

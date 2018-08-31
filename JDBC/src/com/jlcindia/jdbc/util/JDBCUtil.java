@@ -11,8 +11,8 @@ static {
 		System.out.println("*****************");
 	}}
 public static Connection getMYSQLConnection() throws SQLException {
-	String url = "jdbc:mysql://localhost:3306/BASHA";
-	Connection con = DriverManager.getConnection(url, "root", "harsha404");
+	String url = "jdbc:mysql://localhost:3306/my_db";
+	Connection con = DriverManager.getConnection(url, "root", "root");
 	return con;
 	
 }

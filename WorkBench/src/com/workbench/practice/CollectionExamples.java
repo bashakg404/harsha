@@ -1,9 +1,7 @@
 package com.workbench.practice;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class CollectionExamples {
 	
@@ -21,10 +19,13 @@ public class CollectionExamples {
 		System.out.println("arraylist:" +arraylist);
 		
 		System.out.println("print the next element after avi");
-		arraylist.add(1, "Welcome to Java");
+		//from here you are adding the elements during the iteration so it will through cuncurrentmodification exception
+		arraylist.add(1, "Welcome to Java");//it will replace the value which is in number 1 place ie avi
+
 		System.out.println("arrayList:" +arraylist);
 		System.out.println("arraylist:" +arraylist.get(2));
 		System.out.println("arraylist:" +arraylist.contains("java"));
+
 		System.out.println("arraylist:" +arraylist.remove(3));
 		System.out.println(arraylist);
 		System.out.println("arraylist:" +arraylist.set(1, "Welcome to Spring"));
@@ -68,10 +69,10 @@ public class CollectionExamples {
     System.out.println("Collection:" + collection.remove("Hazi"));
     System.out.println("Collection:"+ collection.remove("sandy"));
     System.out.println(collection);
-    collection.clear();
+    //collection.clear();
     System.out.println("collection:" + collection.size());
     Object arr[]=collection.toArray();
-    for(int i=0; i<=arr.length; i++){
+    for(int i=0; i<=arr.length-1; i++){
     	System.out.println(arr[i]);
     	arr[i]="CGI";
     }
@@ -90,14 +91,14 @@ public class CollectionExamples {
 		Iterator iterator=collection.iterator();
 		while(iterator.hasNext()){
 			Object obj=iterator.next();
-			System.out.println(obj);
-			if(obj.equals("jsp")) 
+			System.out.println("Object:"+obj);
+			if(obj.equals("java")) 
 				iterator.remove();
 		}
 		System.out.println(collection);
 	
 		
-			}
+			
 		Collection collection1=new ArrayList();
 		collection1.add("Spring");
 		collection1.add("hibernate");
@@ -108,8 +109,8 @@ public class CollectionExamples {
 		collection.addAll(collection1);//collection.add(collection1);
 		System.out.println(collection +"\t" + collection.size());
 		}
-}
-*/
+}*/
+
 ///collection example//////
 	/*public static void main(String[] args){
 		Collection collection=new ArrayList();
@@ -128,13 +129,13 @@ public class CollectionExamples {
 		collection2.add("Spring");
 		System.out.println(collection + "\n" + collection1 + "\n" + collection2);
 		System.out.println(collection.containsAll(collection1));
-		System.out.println(collection.containsAll(collection2));
-		//List<String> synchronisationList= Collections.synchronizedList(arraylist);
+		System.out.println("Collection.ContainsAll(collection2):"+collection.containsAll(collection2));
+		List<String> synchronisationList= Collections.synchronizedList(arraylist);
 	}
-	}*/
-	
+	}
+	*/
 	////unmodifiable list//////
-	/*public static void main(String[] args){
+/*	public static void main(String[] args){
 		List<String> arraylist=new ArrayList<String>();
 		arraylist.add("cgi");
 		arraylist.add("tcs");
@@ -241,9 +242,9 @@ public class CollectionExamples {
 	}*/
 	
 	///////Exploring Set Interface/////////
-/*	public static void main(String[] args){
-		//HashSet set = new HashSet();//will produce unordered output
-		LinkedHashSet set=new LinkedHashSet();//will produce same output as you given and it will produce both int & char values
+	/*public static void main(String[] args){
+		HashSet set = new HashSet();//will produce unordered output
+		//LinkedHashSet set=new LinkedHashSet();//will produce same output as you given and it will produce both int & char values
 		//TreeSet set=new TreeSet();//will produce the output in alphabetical order
 		set.add("CSK");
 		set.add("SRH");
@@ -256,8 +257,8 @@ public class CollectionExamples {
 		set.add(new Long(69));
 		set.add(new Byte((byte)65));
 		set.add("KKR");
-		//System.out.println("HashSet:" + set);
-		System.out.println("LinkedhashSet output:" + set);
+		System.out.println("HashSet:" + set);
+		//System.out.println("LinkedhashSet output:" + set);
 		//System.out.println("Treeset output:" + set);
 		
 		}}*/
@@ -279,7 +280,7 @@ class Student{
 		return ""+sid;
 	}
 	public int hashCode(){
-		System.out.println("hash cde");
+		System.out.println("hash code");
 		return sid;
 	}
 	public boolean equals(Object obj){
@@ -291,8 +292,8 @@ class Student{
 		}
 		 return false;
 	}
-}
-*/
+}*/
+
 	/////////tree set examples////////////
 /*	public static void main(String args[]){
 		TreeSet ts=new TreeSet();
@@ -573,9 +574,9 @@ class Student{
 		
 		
 	}
-	}
+	}*/
 
-*/
+
 	////map, hashmap, linked hashmap, Tree map////////////
 /*	public static void main(String args[]){
 		//Map<Integer, Book> map=new HashMap<Integer, Book>();///Hash map no ordere
@@ -765,5 +766,4 @@ class Student{
 	map.put(1, "Azure");
 	System.out.println(map.get(1));
 }}*/
-
-}	
+}

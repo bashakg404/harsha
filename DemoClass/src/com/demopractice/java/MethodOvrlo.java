@@ -1,4 +1,4 @@
-/*package com.demopractice.java;
+package com.demopractice.java;
 
 public class MethodOvrlo {
 public static void main(String args[]){
@@ -28,7 +28,7 @@ class Airt{
 			return b*a*c;
 		}
 	}
-
+/*
 	//2nd Part
 	AirStr airstr=new AirStr();
 	int z=airstr.add(111,222);

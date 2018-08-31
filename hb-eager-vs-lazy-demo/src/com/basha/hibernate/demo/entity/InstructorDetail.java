@@ -41,7 +41,7 @@ public class InstructorDetail {
 	@Column(name="hobby")
 	private String hobby;
 	
-	//add new field for instructor(Also getters and setters) bidirestional
+	//add new field for instructor(Also getters and setters) bidirectional
 	@OneToOne(mappedBy="instructorDetail", 
 			cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
 	private Instructor instructor;

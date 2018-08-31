@@ -10,7 +10,7 @@ public class Active implements Bike {
 
 
 	@Autowired
-	@Qualifier("royalEnfield")
+	@Qualifier("beneli")
 	private Brands brands;
 
 	public void setBrands(Brands brands) {
