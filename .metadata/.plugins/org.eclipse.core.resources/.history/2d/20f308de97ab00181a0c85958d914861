@@ -1,0 +1,13 @@
+package com.demopractice.String;
+
+public class StringToInt {
+
+	public static void main(String[] args) {
+		
+		String str="12345";
+		int i=Integer.parseInt(str);
+		int add=i+3;
+		System.out.println(add);
+	}
+
+}

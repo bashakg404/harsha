@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<classpath>
+  <source-attachment entry="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/catalina.jar" runtime-id="Apache Tomcat v8.0 (6)" source-attachment-path="C:/Users/BASHAS~1.GUD/AppData/Local/Temp/.org.sf.feeling.decompiler1532633974462/source/tomcat-catalina-8.0.52-sources-1532640151663.jar"/>
+  <source-attachment entry="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-coyote.jar" runtime-id="Apache Tomcat v8.0 (6)" source-attachment-path="C:/Users/BASHAS~1.GUD/AppData/Local/Temp/.org.sf.feeling.decompiler1532460730881/source/tomcat-coyote-8.0.52-sources.jar"/>
+  <source-attachment entry="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-util.jar" runtime-id="Apache Tomcat v8.0 (6)" source-attachment-path="C:/Users/BASHAS~1.GUD/AppData/Local/Temp/.org.sf.feeling.decompiler1532460730881/source/tomcat-util-8.0.52-sources.jar"/>
+  <source-attachment entry="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-websocket.jar" runtime-id="Apache Tomcat v8.0 (6)" source-attachment-path="C:/Users/BASHAS~1.GUD/AppData/Local/Temp/.org.sf.feeling.decompiler1532460730881/source/tomcat-websocket-8.0.52-sources.jar"/>
+</classpath>

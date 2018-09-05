@@ -4,8 +4,8 @@ public class TypeCastingDemo {
 
 	D dobj=new D();
 	A aobj=dobj;
-	//B bobj=aobj; //cannot conver from A to B
-	//D dobj1=aobj;//cannot conver from A to D
+	//B bobj=aobj; //cannot convert from A to B
+	//D dobj1=aobj;//cannot convert from A to D
 	B bobj=(B)aobj;//adding cast to B
 }
 

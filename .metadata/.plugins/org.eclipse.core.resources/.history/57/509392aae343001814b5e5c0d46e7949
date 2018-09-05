@@ -1,0 +1,32 @@
+package com.workbench.practice;
+
+import java.util.ArrayList;
+
+import javax.swing.plaf.synth.SynthScrollBarUI;
+
+public class CollectionExamples {
+	
+	///ArrayList Example//
+	public static void main(String[] args){
+		ArrayList<String> arraylist=new ArrayList<String>();
+		arraylist.add("basha");
+		arraylist.add("avi");
+		arraylist.add("java");
+		arraylist.add("spring");
+		/*Iterator iterator=arraylist.iterator();
+		while(iterator.hasNext()){
+			System.out.println(iterator.next());*/ //it will print all the strings
+		
+		System.out.println("arraylist:" +arraylist);
+		
+		System.out.println("print the next element after avi");
+		arraylist.add(1, "Welcome to Java");
+		System.out.println("arrayList:" +arraylist);
+		System.out.println("arraylist:" +arraylist.get(2));
+		System.out.println("arraylist:" +arraylist.contains("java"));
+		System.out.println("arraylist:" +arraylist.get(4));
+		}
+		
+	}
+
+

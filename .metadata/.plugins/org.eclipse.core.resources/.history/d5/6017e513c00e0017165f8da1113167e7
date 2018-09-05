@@ -1,0 +1,19 @@
+package com.demopractice.java;
+
+public class LocalVarBlockDemo {
+public static void main(String args[]){
+System.out.println(LocalVar.b);
+//LocalVar loc=new LocalVar();
+}}
+
+class LocalVar{
+	int a=111;
+	static int b=9;
+	{
+		int c=333;
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		
+	}
+}

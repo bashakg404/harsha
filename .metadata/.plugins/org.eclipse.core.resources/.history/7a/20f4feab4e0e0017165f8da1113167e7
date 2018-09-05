@@ -1,0 +1,17 @@
+package com.demopractice.java;
+
+ class C {
+int num1;
+static int num2;
+public void show()
+{
+	num2=9;
+
+	public class Demo{
+		
+		public static void main(String args[]){
+			
+		}
+	}
+
+}

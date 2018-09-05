@@ -1,0 +1,25 @@
+package com.demopractice.java;
+
+ class C {
+int num1;
+static int num2;
+public void show()
+{
+	num2=9;
+}}
+public class Demo{
+		
+		public static void main(String args[]){
+			C.num2=5;
+			
+			A obj1=new A();
+			A obj2=new A();
+			A obj3=new A();
+			
+			obj1.num1=2;
+			obj2.num2=5;
+			obj3.num3=7;
+		}
+	}
+
+}

@@ -1,0 +1,42 @@
+package com.demopractice.java;
+
+public class BlocksDemo {
+public static void main(String args[]){
+	
+//1st Part
+	/*System.out.println(Hai.a);
+	System.out.println(Hai.b);
+	Hai h=new Hai();
+	System.out.println(h.a);*/
+	
+	//2nd Part
+	System.out.println(Hai.x);
+	
+}
+}
+
+class Hai{
+	//1st part
+	/*static int a;
+	static int b;
+	{
+		a=10;
+		System.out.println("Initialized:" +a);
+	}
+	static{
+		b=11;
+		System.out.println("Initialized static:"+b);
+		} */
+		
+		//2nd Part
+	
+	static int x=111;
+	{
+		System.out.println("Instance black");
+		
+	}
+	static{
+		System.out.println("static block");
+	}
+	
+}

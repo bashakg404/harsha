@@ -1,0 +1,409 @@
+package com.workbench.practice;
+
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class ThreadExample {
+/*	public static void main(String[] args) {
+		MyThread t1 = new MyThread();
+		System.out.println("111111");
+		MyThread t2 = new MyThread();
+		System.out.println("2222222");
+		t1.start();
+		System.out.println("333333");
+		t2.start();
+		System.out.println("4444444");
+		Thread t = Thread.currentThread();
+		System.out.println("55555");
+		for (int i = 100; i <= 110; i++) {
+			System.out.println(t.getName() + " -value is: " + i);
+			try {
+				Thread.sleep(500);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}
+
+
+class MyThread extends Thread {
+	public void run() {
+		Thread thread = Thread.currentThread();
+		System.out.println("666666666");
+		for (int i = 1; i <= 10; i++) {
+			System.out.println(thread.getName() + "-value is:" + i);
+			{
+				try {
+					Thread.sleep(500);
+
+				} catch (Exception e) {
+					e.printStackTrace();
+
+				}
+			}
+		}
+	}
+}*/
+////////////////Thread creation by implementing runnable///////////
+	/*public static void main(String [] args){
+		MyRunnable runnable=new MyRunnable();
+		Thread thread = new Thread(runnable);
+		thread.start();
+	}}
+
+class MyRunnable implements Runnable{
+	public void run(){
+		System.out.println("in run() method");
+		
+	}
+}*/
+	/////////////////////Thread by Extending///////////
+	/*public static void main(String[] args){
+		System.out.println("CurrentThreadName: "+Thread.currentThread().getName());
+		MyThread object= new MyThread();
+		System.out.println("vvvvvvvvv");
+			object.start();
+			System.out.println("xxxxxxxxx");
+	}}
+	
+	class MyThread extends Thread{
+		public void run(){
+			System.out.println("in run() method");
+			System.out.println("CurrentThreadNames: "+Thread.currentThread().getName());
+		}
+	}*/
+	
+////////Thread has their own stack////////////////
+/*	public static void main(String...args){
+		System.out.println("In main method()");
+		method1();
+	}
+
+	static void method1(){
+		MyThread obj=new MyThread();   
+		obj.start();
+	}}
+
+	class MyThread extends Thread{
+		public void run(){
+			System.out.println("In Run Method");
+		}
+	}
+
+	*/	
+///////////////thread execution is unpredictable///////////
+/*	public static void main(String args[]){
+		System.out.println("in main method");
+		MyRunnable runnable= new MyRunnable();
+		Thread thread1=new Thread(runnable);
+		Thread thread2=new Thread(runnable);
+		thread1.start();
+		thread2.start();
+		System.out.println("end main method");
+	}}
+class MyRunnable implements Runnable {
+	public void run() {
+		System.out.println("in run method");
+		for(int i=0; i<=5; i++)
+		{
+			System.out.println("i="+i+" , ThreadName=" + Thread.currentThread().getName());
+		}}
+		}*/
+	
+///////////////////start() run()/////////
+	/*public static void main(String[] args){
+		System.out.println("current threas name: " +Thread.currentThread().getName());
+		MyRunnable myrunnable= new MyRunnable();
+		Thread thread=new Thread(myrunnable);
+		thread.start();
+	}}
+class MyRunnable implements Runnable{
+	public void run(){
+		System.out.println("in run method");
+		System.out.println("current threas name: " +Thread.currentThread().getName());
+	}
+	}
+*/
+
+/////////syncrinized///
+/*	public static void main(String[] args){
+		Thread thread1=new Thread(){
+			
+		public void run(){
+			for(int i=0; i<=5; i++)
+				method1();
+		}};
+		
+	Thread thread2=new Thread(){
+		public void run(){
+			for(int i=0; i<=5; i++)
+				method2();
+		}
+	
+			};
+			thread1.start();
+			thread2.start();
+		}
+	
+	//static int x=0, y=0;
+
+	static  volatile int x=0, y=0;
+	
+     //static synchronized void method1(){
+    	 static void method1(){
+    		 
+    	 
+    
+		x++;
+		y++;
+	}
+	//static synchronized void method2(){
+		static void method2(){
+		System.out.println("x= " +x + "y= " +y);
+	}}*/
+	
+/*	public static void main(String args[]){
+		Account account =new Account();
+		new AccountThread(account);
+	}
+	}
+
+class Account{
+	int balance=1000;
+	public void withdraw(int amount){
+  if(balance>=amount){
+	  System.out.println(Thread.currentThread().getName()+"is going to withdraw" + balance);
+	  try{
+		  Thread.sleep(1200);
+		  }catch(Exception e){
+		  }
+	  balance-=amount;
+
+	  System.out.println(Thread.currentThread().getName()+"is completed withdraw" + balance);
+  }
+  else{
+
+	  System.out.println("No Funds for"+Thread.currentThread().getName());
+	  
+	  
+		  }
+  }
+	
+	public int getBal(){
+		return balance;
+		
+	}
+}
+class AccountThread implements Runnable{
+	Account account=null;
+	AccountThread(Account account){
+		this.account=account;
+		Thread thread1=new Thread(this, "A");
+		Thread thread2=new Thread(this, "B");
+		thread1.start();
+		thread2.start();
+	}
+	public void run(){
+		for(int i=0; i<=2; i++){
+		account.withdraw(500);
+		if(account.getBal()<0){
+			System.out.println("Ammount is overdrawn");
+		}
+		}
+	}
+}*/
+	
+/*	public static void main(String[] args){
+		TicketBooking ticketbooking=new TicketBooking();
+		Thread thread1=new Thread(ticketbooking,"passanger1 thread");
+		Thread thread2=new Thread(ticketbooking,"passanger2 thread");
+		thread1.start();
+		thread2.start();
+	}
+	}
+
+class TicketBooking implements Runnable {
+	int ticketsAvailable=1;
+	public void run() {
+		System.out.println("waiting for ticket booking: " + Thread.currentThread().getName());
+		synchronized(this){
+		if(ticketsAvailable>0){
+			System.out.println("Booking Tickes for: " +Thread.currentThread().getName());
+			try{
+				Thread.sleep(10000);
+			}catch(Exception e){}
+			ticketsAvailable--;
+			System.out.println("Ticket Booked For:" + Thread.currentThread().getName());
+			System.out.println("currently tickets available: " +ticketsAvailable);
+		}
+		else{
+			System.out.println("Ticket not booked for: " + Thread.currentThread().getName());
+			}
+			
+		}
+		
+	}}*/
+//////////producer consumer//////////
+/*	public static void main(String[] args){
+		List<Integer> sharedQueue =new LinkedList<Integer>(); //creating shared object
+		Producer producer=new Producer(sharedQueue);
+		Consumer consumer=new Consumer(sharedQueue);
+		
+		Thread producerThread= new Thread(producer,"producerThread");
+		Thread consumerThread= new Thread(consumer,"consumerThread");
+		producerThread.start();
+		consumerThread.start();
+	}}
+class Producer implements Runnable{
+	private List<Integer> sharedQueue;
+	private int maxSize=2; //maximum number of products which sharedQueue can hold at a time.
+	 public Producer(List<Integer> sharedQueue){
+		 this.sharedQueue=sharedQueue;
+	 }
+@Override
+	 public void run(){
+		 for(int i=1; i<=10; i++){ //produce 10 products
+         try{
+        	 produce(i);
+        	 }catch(InterruptedException e)
+         {
+        		 e.printStackTrace();
+        		 }
+         }
+	 }
+	private void  produce(int i) throws InterruptedException{
+		synchronized(sharedQueue){
+			//if sharedQuey is full wait until consumer consumes.
+			while (sharedQueue.size() == maxSize) {
+	             System.out.println("Queue is full, producerThread is waiting for "
+	                     + "consumerThread to consume, sharedQueue's size= "+maxSize);
+	             sharedQueue.wait();
+	         }
+	        }
+		2 Synchronized blocks have been used means before
+         producer produces by entering below synchronized
+         block consumer can consume.  
+        
+      
+       as soon as producer produces (by adding in sharedQueue) it notifies consumerThread.
+        synchronized (sharedQueue) {  
+           System.out.println("Produced : " + i);
+           sharedQueue.add(i);
+         Thread.sleep((long)(Math.random() * 1000));
+         sharedQueue.notify();
+        }
+    }
+}
+class Consumer implements Runnable {
+    private List<Integer> sharedQueue;
+    public Consumer(List<Integer> sharedQueue) {
+        this.sharedQueue = sharedQueue;
+    }
+   
+   @Override
+    public void run() {
+        while (true) {
+         try {
+             consume();
+             Thread.sleep(100);
+         } catch (InterruptedException e) {  e.printStackTrace();   }
+        }
+    }
+ 
+    private void consume() throws InterruptedException {
+      
+       synchronized (sharedQueue) {
+           //if sharedQuey is empty wait until producer produces.
+           while (sharedQueue.size() == 0) {
+                  System.out.println("Queue is empty, consumerThread is waiting for "
+                               + "producerThread to produce, sharedQueue's size= 0");
+             sharedQueue.wait();
+         }
+       }
+       2 Synchronized blocks have been used means before
+        consumer start consuming by entering below synchronized
+        block producer can produce.  
+       
+     
+      If sharedQueue not empty consumer will consume
+    (by removing from sharedQueue) and notify the producerThread.
+    
+       synchronized (sharedQueue) {
+          Thread.sleep((long)(Math.random() * 2000));
+        System.out.println("CONSUMED : "+ sharedQueue.remove(0));
+        sharedQueue.notify();
+       }
+   }
+  }*/
+	//////////////////////////consumer producer using BlockedQueue//////////
+	public static void main(String args[]){
+	     
+	     //Creating shared object  
+	     BlockingQueue<Integer> sharedQueue = new LinkedBlockingQueue<Integer>();
+	    
+	     Producer producer=new Producer(sharedQueue);
+	     Consumer consumer=new Consumer(sharedQueue);
+	    
+	     Thread producerThread = new Thread(producer, "ProducerThread");
+	     Thread consumerThread = new Thread(consumer, "ConsumerThread");
+	     producerThread.start();
+	     consumerThread.start();
+	 
+	    }
+	 
+	}
+/**
+ * Producer Class in java.
+ */
+class Producer implements Runnable {
+ 
+    private final BlockingQueue<Integer> sharedQueue;
+ 
+    public Producer(BlockingQueue<Integer> sharedQueue) {
+        this.sharedQueue = sharedQueue;
+    }
+ 
+    @Override
+    public void run() {
+        for(int i=1; i<=10; i++){
+         try {
+             System.out.println("Produced : " + i);
+             //put/produce into sharedQueue.
+             sharedQueue.put(i);          
+         } catch (InterruptedException ex) {
+             
+         }
+        }
+    }
+ 
+}
+ 
+/**
+ * Consumer Class in java.
+ */
+class Consumer implements Runnable{
+ 
+    private BlockingQueue<Integer> sharedQueue;
+ 
+    public Consumer (BlockingQueue<Integer> sharedQueue) {
+        this.sharedQueue = sharedQueue;
+    }
+ 
+    @Override
+    public void run() {
+        while(true){
+         try {
+           //take/consume from sharedQueue.
+             System.out.println("CONSUMED : "+ sharedQueue.take());  
+         } catch (InterruptedException ex) {
+             
+         }
+        }
+    }
+ 
+ 
+}
+	

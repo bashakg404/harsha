@@ -1,0 +1,29 @@
+STRING
+
+-->String is built in and final class.
+
+-->Two ways to create String objects
+	1. Without using new operator.
+	2. Using new operator.
+
+--> If you create String without new operator, the string will be in String Constant Pool. JVM verifies String literal in the String
+	Constant Pool.
+	If String literal is not available in the pool it will create new String object inside the pool.
+	If available then existing String object address will be assigned to String reference variable
+
+--> System.out.println(s1==s2);----It will compare the address(Hashcode)
+	System.out.println(s1.equals(s2));-----It will compare the value inside the object.
+	
+--> Intern is key word which will create the string in constant string pool. If the string literal is same it will point to that
+	else it will create one more object in String Constant pool.
+	
+POLYMORPHISM
+
+-->Polymorphism is concept of java where we can perform single action in different ways.
+
+-->Two Types 1. Compile time(Method overloading)
+			 2. Run time(Method Overriding)
+
+** When we make class as a final?
+
+** 

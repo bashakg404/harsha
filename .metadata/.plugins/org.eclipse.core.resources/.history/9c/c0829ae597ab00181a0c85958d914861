@@ -1,0 +1,13 @@
+package com.demopractice.String;
+
+public class StringToInt {
+
+	public static void main(String[] args) {
+		
+		String str="12345.23";
+		float i=Float.parseFloat(str);
+		float add=i+4;
+		System.out.println(add);
+	}
+
+}

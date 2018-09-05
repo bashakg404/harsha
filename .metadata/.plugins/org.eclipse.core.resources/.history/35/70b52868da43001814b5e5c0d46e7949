@@ -1,0 +1,24 @@
+package com.workbench.practice;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class CollectionExamples {
+	
+	///ArrayList Example//
+	public static void main(String[] args){
+		ArrayList<String> arraylist=new ArrayList<String>();
+		arraylist.add("basha");
+		arraylist.add("avi");
+		arraylist.add("java");
+		arraylist.add("spring");
+		/*Iterator iterator=arraylist.iterator();
+		while(iterator.hasNext()){
+			System.out.println(iterator.next());*/ //it will print all the strings
+		
+		System.out.println("arraylist:" +arraylist);
+		}
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.demo.dynamicdispatch;
+
+public class Vehicle {
+	
+	public static void main(String[] args){
+		
+		Vehicle car=new Car();
+		
+		System.out.println("In Main");
+		
+		
+	}
+
+	class Car extends Vehicle{
+		
+	}
+}

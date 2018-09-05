@@ -1,0 +1,10 @@
+127.0.0.1 - - [06/Aug/2018:09:00:02 -0400] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [06/Aug/2018:09:00:05 -0400] "GET /emusicstore/ HTTP/1.1" 200 7860
+0:0:0:0:0:0:0:1 - - [06/Aug/2018:09:00:05 -0400] "GET /emusicstore/resources/css/carousel.css HTTP/1.1" 200 2735
+0:0:0:0:0:0:0:1 - - [06/Aug/2018:09:00:05 -0400] "GET /emusicstore/resources/css/bootstrap.min.css HTTP/1.1" 200 121260
+0:0:0:0:0:0:0:1 - - [06/Aug/2018:09:00:05 -0400] "GET /emusicstore/resources/css/main.css HTTP/1.1" 200 587
+0:0:0:0:0:0:0:1 - - [06/Aug/2018:09:00:05 -0400] "GET /emusicstore/resources/js/bootstrap.min.css HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [06/Aug/2018:09:00:05 -0400] "GET /emusicstore/resources/images/back1.jpg HTTP/1.1" 200 10074
+0:0:0:0:0:0:0:1 - - [06/Aug/2018:09:00:05 -0400] "GET /emusicstore/resources/images/back3.jpg HTTP/1.1" 200 9652
+0:0:0:0:0:0:0:1 - - [06/Aug/2018:09:00:05 -0400] "GET /emusicstore/resources/images/back2.jpg HTTP/1.1" 200 13520
+0:0:0:0:0:0:0:1 - - [06/Aug/2018:09:00:05 -0400] "GET /emusicstore/resources/fonts/glyphicons-halflings-regular.eot? HTTP/1.1" 200 20127

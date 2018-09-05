@@ -1,0 +1,8 @@
+package com.demopractice.java;
+
+public class LocalVarBlockDemo {
+public static void main(String args[]){
+	System.out.println(null);
+
+}}
+

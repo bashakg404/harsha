@@ -1,0 +1,17 @@
+package com.array.programs;
+
+import java.util.Scanner;
+
+public class StringWithWithoutSpace {
+
+	public static void main(String[] args){
+		String str, strWithoutWhiteSpace;
+		int i;
+		Scanner scann=new Scanner(System.in);
+		System.out.println("Enter the sentence: ");
+		str=scann.nextLine(); 	
+	}
+	//using replace all method
+	strWithoutWhiteSpace=str.replaceAll(" ","");
+	System.out.println(str);
+}}

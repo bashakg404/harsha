@@ -1,0 +1,19 @@
+package com.demo.methodoverloading;
+
+public class MethodOverloadingDemo {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+	class Airthmatic{
+		int a=10;
+		int b=20;
+		int add(){
+			
+			return a+b;
+			
+		}
+	}
+}

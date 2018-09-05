@@ -1,0 +1,84 @@
+package com.workbench.practice;
+
+import java.io.*;
+
+/*class Addition {
+
+	int sum = 0;
+
+	public int addTwoInt(int a, int b) {
+		sum = a + b;
+		return sum;
+
+	}
+
+}
+
+class Methods {
+	public static void main(String[] args) {
+		Addition add = new Addition();
+		int s = add.addTwoInt(1, 2);
+		System.out.println("Sum of two integer values :" + s);
+
+	}*/
+ //next program
+	
+/*class Test {
+	public static int i = 0;
+	Test() {
+	  i++;
+}
+	public static int get() {
+		return i;
+	}
+
+	public int m1() {
+		System.out.println("1.Inside the method m1 by object of GFG class");
+
+		this.m2();
+		System.out.println("3.Inside the method m1 by object of GFG class");
+		return 1;
+	
+	}
+
+	public void m2() {
+
+		System.out.println("2.In method m2 came from method m1");
+	}
+}
+
+class Methods {
+	public static void main(String[] args) {
+
+		Test obj = new Test();
+
+		int i = obj.m1();
+		System.out.println("Control returned after method m1 :" + i);
+
+		obj.m2();
+		int no_of_objects = Test.get();
+
+		System.out.print("No of instances created till now : ");
+		System.out.println(no_of_objects);
+
+	}
+}
+*/
+
+//METHOD OVERLOADING
+
+
+public class Methods {
+	 System.out.println("method");
+    public void println() {  }
+    public void println(boolean x) {  }
+    public void println(char x) {  }
+    public void println(int x) {  }
+    public void println(long x) {  }
+    public void println(float x) {  }
+    public void println(double x) {  }
+    public void println(char x[]) {  }
+    public void println(String x) {  }
+    public void println(Object x) {  }
+   
+}

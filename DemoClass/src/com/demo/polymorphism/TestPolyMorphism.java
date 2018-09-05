@@ -5,7 +5,7 @@ public class TestPolyMorphism {
 	public static void main(String[] args) {
 		Bank b=new ICICI();
 		System.out.println("ICICI interest rate is:" + b.getRateOfInterest());
-		Bank sbi=new Citi();
+		Bank sbi=new SBI();
 		System.out.println("SBI Interest rate is:" +sbi.getRateOfInterest());
 		
 		

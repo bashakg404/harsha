@@ -1,0 +1,21 @@
+package com.demopractice.java;
+
+public class BlocksDemo {
+public static void main(String args[]){
+	
+
+	System.out.println(Hai.a);
+	
+	Hai h=new Hai();
+	System.out.println(h.a);
+	
+}
+}
+
+class Hai{
+	int a;
+	{
+		a=10;
+		System.out.println("Initialized:" +a);
+	}
+}

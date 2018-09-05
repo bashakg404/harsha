@@ -1,0 +1,17 @@
+package com.basha.springdemo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class RandomFortuneService implements FortuneService {
+
+	//create an array of strings
+	private String[] data={"Knowledge is devine", "Create your dependency wherever you go", "Make the journey happier"};
+	
+	@Override
+	public String getFortune() {
+		
+		return null;
+	}
+
+}

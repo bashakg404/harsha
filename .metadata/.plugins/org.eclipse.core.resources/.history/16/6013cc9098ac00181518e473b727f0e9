@@ -1,0 +1,22 @@
+package com.demo.methodoverloading;
+
+public class MethodOverloadingDemo {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+	static class Hello{
+		static int add(int a, int b){
+			System.out.println("add (int, int)");
+			return a+b;
+		}
+		
+		 static int add(int a, int b, int c){
+			System.out.println("add (int int int)");
+			return a+b+c;
+		}
+	}
+		
+}

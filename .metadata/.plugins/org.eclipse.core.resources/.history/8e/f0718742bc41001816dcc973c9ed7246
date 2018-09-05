@@ -1,0 +1,244 @@
+package com.workbench.practice;
+
+public class ThreadExample {
+/*	public static void main(String[] args) {
+		MyThread t1 = new MyThread();
+		System.out.println("111111");
+		MyThread t2 = new MyThread();
+		System.out.println("2222222");
+		t1.start();
+		System.out.println("333333");
+		t2.start();
+		System.out.println("4444444");
+		Thread t = Thread.currentThread();
+		System.out.println("55555");
+		for (int i = 100; i <= 110; i++) {
+			System.out.println(t.getName() + " -value is: " + i);
+			try {
+				Thread.sleep(500);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}
+
+
+class MyThread extends Thread {
+	public void run() {
+		Thread thread = Thread.currentThread();
+		System.out.println("666666666");
+		for (int i = 1; i <= 10; i++) {
+			System.out.println(thread.getName() + "-value is:" + i);
+			{
+				try {
+					Thread.sleep(500);
+
+				} catch (Exception e) {
+					e.printStackTrace();
+
+				}
+			}
+		}
+	}
+}*/
+////////////////Thread creation by implementing runnable///////////
+	/*public static void main(String [] args){
+		MyRunnable runnable=new MyRunnable();
+		Thread thread = new Thread(runnable);
+		thread.start();
+	}}
+
+class MyRunnable implements Runnable{
+	public void run(){
+		System.out.println("in run() method");
+		
+	}
+}*/
+	/////////////////////Thread by Extending///////////
+	/*public static void main(String[] args){
+		System.out.println("CurrentThreadName: "+Thread.currentThread().getName());
+		MyThread object= new MyThread();
+		System.out.println("vvvvvvvvv");
+			object.start();
+			System.out.println("xxxxxxxxx");
+	}}
+	
+	class MyThread extends Thread{
+		public void run(){
+			System.out.println("in run() method");
+			System.out.println("CurrentThreadNames: "+Thread.currentThread().getName());
+		}
+	}*/
+	
+////////Thread has their own stack////////////////
+/*	public static void main(String...args){
+		System.out.println("In main method()");
+		method1();
+	}
+
+	static void method1(){
+		MyThread obj=new MyThread();   
+		obj.start();
+	}}
+
+	class MyThread extends Thread{
+		public void run(){
+			System.out.println("In Run Method");
+		}
+	}
+
+	*/	
+///////////////thread execution is unpredictable///////////
+/*	public static void main(String args[]){
+		System.out.println("in main method");
+		MyRunnable runnable= new MyRunnable();
+		Thread thread1=new Thread(runnable);
+		Thread thread2=new Thread(runnable);
+		thread1.start();
+		thread2.start();
+		System.out.println("end main method");
+	}}
+class MyRunnable implements Runnable {
+	public void run() {
+		System.out.println("in run method");
+		for(int i=0; i<=5; i++)
+		{
+			System.out.println("i="+i+" , ThreadName=" + Thread.currentThread().getName());
+		}}
+		}*/
+	
+///////////////////start() run()/////////
+	/*public static void main(String[] args){
+		System.out.println("current threas name: " +Thread.currentThread().getName());
+		MyRunnable myrunnable= new MyRunnable();
+		Thread thread=new Thread(myrunnable);
+		thread.start();
+	}}
+class MyRunnable implements Runnable{
+	public void run(){
+		System.out.println("in run method");
+		System.out.println("current threas name: " +Thread.currentThread().getName());
+	}
+	}
+*/
+
+/////////syncrinized///
+/*	public static void main(String[] args){
+		Thread thread1=new Thread(){
+			
+		public void run(){
+			for(int i=0; i<=5; i++)
+				method1();
+		}};
+		
+	Thread thread2=new Thread(){
+		public void run(){
+			for(int i=0; i<=5; i++)
+				method2();
+		}
+	
+			};
+			thread1.start();
+			thread2.start();
+		}
+	
+	//static int x=0, y=0;
+
+	static  volatile int x=0, y=0;
+	
+     //static synchronized void method1(){
+    	 static void method1(){
+    		 
+    	 
+    
+		x++;
+		y++;
+	}
+	//static synchronized void method2(){
+		static void method2(){
+		System.out.println("x= " +x + "y= " +y);
+	}}*/
+	
+/*	public static void main(String args[]){
+		Account account =new Account();
+		new AccountThread(account);
+	}
+	}
+
+class Account{
+	int balance=1000;
+	public void withdraw(int amount){
+  if(balance>=amount){
+	  System.out.println(Thread.currentThread().getName()+"is going to withdraw" + balance);
+	  try{
+		  Thread.sleep(1200);
+		  }catch(Exception e){
+		  }
+	  balance-=amount;
+
+	  System.out.println(Thread.currentThread().getName()+"is completed withdraw" + balance);
+  }
+  else{
+
+	  System.out.println("No Funds for"+Thread.currentThread().getName());
+	  
+	  
+		  }
+  }
+	
+	public int getBal(){
+		return balance;
+		
+	}
+}
+class AccountThread implements Runnable{
+	Account account=null;
+	AccountThread(Account account){
+		this.account=account;
+		Thread thread1=new Thread(this, "A");
+		Thread thread2=new Thread(this, "B");
+		thread1.start();
+		thread2.start();
+	}
+	public void run(){
+		for(int i=0; i<=2; i++){
+		account.withdraw(500);
+		if(account.getBal()<0){
+			System.out.println("Ammount is overdrawn");
+		}
+		}
+	}
+}*/
+	
+	public static void main(String[] args){
+		TicketBooking ticketbooking=new TicketBooking();
+		Thread thread1=new Thread(ticketbooking,"passanger1 thread");
+		Thread thread2=new Thread(ticketbooking,"passanger2 thread");
+		thread1.start();
+		thread2.start();
+	}
+	}
+
+class TicketBooking impleaments new Runnable {
+	int ticketsAvailable=1;
+	public void run() {
+		System.out.println("waiting for ticket booking: " + Thread.currentThread().getName());
+		if(ticketsAvailable>0){
+			System.out.println("Booking Tickes for: " +Thread.currentThread().getName());
+			try{
+				Thread.sleep(1000);
+			}catch(Exceptio e){}
+			ticketsAvailable--;
+			System.out.println("Ticket Booked For:" + Thread.currentThread().getName());
+			System.out.println("currently tickets available: " +ticketsAvailable);
+		}
+		else{
+			System.out.println("Ticket not booked for: " + Thread.currentThread().getName());
+			}
+			
+		}
+		
+	}

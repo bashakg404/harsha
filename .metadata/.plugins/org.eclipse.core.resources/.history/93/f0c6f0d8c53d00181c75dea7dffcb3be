@@ -1,0 +1,52 @@
+package com.workbench.practice;
+
+public class ThreadExample {
+/*	public static void main(String[] args) {
+		MyThread t1 = new MyThread();
+		System.out.println("111111");
+		MyThread t2 = new MyThread();
+		System.out.println("2222222");
+		t1.start();
+		System.out.println("333333");
+		t2.start();
+		System.out.println("4444444");
+		Thread t = Thread.currentThread();
+		System.out.println("55555");
+		for (int i = 100; i <= 110; i++) {
+			System.out.println(t.getName() + " -value is: " + i);
+			try {
+				Thread.sleep(500);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}
+
+
+class MyThread extends Thread {
+	public void run() {
+		Thread thread = Thread.currentThread();
+		System.out.println("666666666");
+		for (int i = 1; i <= 10; i++) {
+			System.out.println(thread.getName() + "-value is:" + i);
+			{
+				try {
+					Thread.sleep(500);
+
+				} catch (Exception e) {
+					e.printStackTrace();
+
+				}
+			}
+		}
+	}
+}*/
+////////////////Thread creation by implementing runnable///////////
+	public static void main(String [] args{
+		MyRunnable runnable=new MyRunnable();
+		Thread thread = new Thread(runnable);
+		thread.start();
+	}}

@@ -1,0 +1,5 @@
+package com.Curd.Model;
+
+public class User {
+
+}

@@ -1,0 +1,23 @@
+package com.demopractice.java;
+
+public class B {
+//inst vrbl , st vrbl
+	//inner cl
+	//constr
+	//st blck, inst blk
+	
+	int x;
+	{
+		System.out.println("hdjhasjdh");
+	}
+	
+	static
+	{
+		System.out.println("nmknsncfbsjadb");
+	}
+	
+	public void m2() {
+		// TODO Auto-generated method stub
+		A.m1();
+	}
+}

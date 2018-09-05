@@ -1,0 +1,6 @@
+package com.cgi.model;
+
+public class User {
+	String uname, password, email;
+	   Date registeredon;
+}

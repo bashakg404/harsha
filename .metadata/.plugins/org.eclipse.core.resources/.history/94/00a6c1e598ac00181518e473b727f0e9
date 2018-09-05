@@ -1,0 +1,25 @@
+package com.demo.methodoverloading;
+
+public class MethodOverloadingDemo {
+
+	public static void main(String[] args) {
+		
+		Hello h=new Hello();
+		int a=h.add(10, 20);
+
+	}
+}
+
+	class Hello{
+		int add(int a, int b){
+			System.out.println("add (int, int)");
+			return a+b;
+		}
+		
+		int add(int a, int b, int c){
+			System.out.println("add (int int int)");
+			return a+b+c;
+		}
+	}
+		
+}

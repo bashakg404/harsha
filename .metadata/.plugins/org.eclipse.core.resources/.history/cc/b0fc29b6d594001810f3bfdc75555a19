@@ -1,0 +1,72 @@
+package com.workbench.multithreading;
+
+public class PrintEvenOdd {
+	
+	public static void main(String args[]){
+		
+		Printer print=new Printer();
+		Thread th1=new Thread(new TaskEvenOdd(print, 10, false));
+		Thread th2=new Thread(new TaskEvenOdd(print, 10, true));
+		th1.start();
+		th2.start();
+	}
+	
+	public class TaskEvenOdd implements Runnable{
+		private int max;
+		private Printer print;
+		private boolean isEvenNumber;
+		
+		public TaskEvenOdd(int max, Printer print, boolean isEvenNumber) {
+			this.max = max;
+			this.print = print;
+			this.isEvenNumber = isEvenNumber;
+		}
+		
+		@Override
+		public void run(){
+			System.out.println("run method");
+			int number =isEvenNumber==true ? 2:1;
+			while(number<=max){
+				if(isEvenNumber){
+					print.printEven(number);
+				}else{
+					print.printOdd(number);
+					
+					
+				}
+				number+=2;
+			}
+		}
+		
+	}
+	public class Printer{
+		boolean isOdd=false;
+		synchronized void printEven(int number){
+			while(isOdd==false){
+				try{
+					wait();
+					
+				}catch(InterruptedException ex){
+					ex.printStackTrace();
+				}
+			}
+			System.out.println("Even:"  + number);
+			isOdd=false;
+			notifyAll();
+		}
+		synchronized void  printOdd(int number){
+			while(isOdd=true){
+				try{
+					wait();
+					
+				}catch(InterruptedException ex){
+					ex.printStackTrace();
+				}
+			}
+			System.out.println("Odd:" +number);
+			isOdd=true;
+			notifyAll();
+		}
+	}
+
+}

@@ -1,0 +1,216 @@
+package com.workbench.practice;
+
+public class ExceptionHandling {
+/*
+	//Exceptions//
+	 
+	public static void main(String[] args) {
+		int a, b, result;
+		Scanner input = new Scanner(System.in);
+		System.out.println("Input two integers");
+		a = input.nextInt();
+		b = input.nextInt();
+		try {
+
+			result = a / b;
+			System.out.println("Result= " + result);
+		} catch (ArithmeticException e) {
+			System.out.println("Exception occures: Divided by Zero.");
+		}
+	}
+}
+
+	public static void main(String args[]){
+		String Languages[]={ "C", "C++", "Java", "Spring", "Python"};
+		
+		
+		try{
+			for(int d=1; d<=5; d++){
+				System.out.println(Languages[d]);
+			}
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
+		
+		finally {
+			System.out.println("always execute");
+		}
+			
+		}
+	}
+	//Checked Exception But not good Practice//
+	public static void main(String[] args) throws IOException{
+		FileInputStream fileinputstream= null;
+		fileinputstream= new FileInputStream("C:/Users/bashasab.gudimani/Desktop/text.txt");
+		int k;
+		while((k=fileinputstream.read())!= -1)
+		{
+			System.out.print((char)k);
+		}
+		fileinputstream.close();
+		
+		}
+		
+	}*/
+	//Checked Exception Best Practice//
+	
+	/*public static void main(String[] args){
+		FileInputStream fis=null;
+		try{
+			fis=new FileInputStream("C:/Users/bashasab.gudimani/Desktop/text.txt");
+			
+		}catch(FileNotFoundException fnfe){
+			System.out.println("the specified file is not present at the given path");
+		}
+		int k;
+		try{
+			while((k=fis.read()) != -1){
+				System.out.print((char)k);
+				
+			}
+		fis.close();
+		}catch(IOException ioe){
+			System.out.println("I/O Exception: " +ioe);
+			
+		}
+		
+	}}
+*/
+
+	//UNCHECKED EXCEPTION//
+	
+	/*public static void main(String args[]){
+		int num1=20;
+		int num2=0;
+		int result=num1/num2;
+		System.out.println(result);
+	}	}*/
+	
+	/*public static void main(String[] args){
+		System.out.println("main started");
+		String data=null;
+		try{
+			data=args[0];
+		}catch(ArrayIndexOutOfBoundsException e){
+			System.out.println(" *Provide one value as CLA");
+		}
+		int x=0;
+		try{
+			x=Integer.parseInt(data);
+		}catch(NumberFormatException e){
+			System.out.println(" *Provide int value as CLA");
+		}
+		try{
+			int res=10/x;
+			System.out.println("result: "+ res);
+		}catch(ArithmeticException e){
+			System.out.println(" *Provide non zero value as CLA");
+		}
+		System.out.println("Main completed");
+		
+		}
+		}
+	*/
+	/*
+	
+	public static void main(String[] args){
+		System.out.println("main() started");
+		try{
+			new Hello().show();
+		}catch(Exception e){
+			System.out.println("\ncatch block");
+			System.out.println("EX:" +e);
+			System.out.println("Message:" +e.getMessage());
+			System.out.println("Cause:" +e.getCause());
+			System.out.println();
+			e.printStackTrace();
+		}
+		System.out.println("main() completed");
+	}}
+
+class Hello{
+	void show(){
+		System.out.println("Show() begins");
+		new A().m1();
+		System.out.println("show() ends");
+	}}
+class A{
+	void m1(){
+		System.out.println("A M1() begins");
+		new B().m2();
+		System.out.println("A m1() ends");
+	}}
+class B{
+	void m2(){
+		System.out.println("B M2() begins");
+		new C().m3();
+		System.out.println("B M2() ends");
+	}}
+class C{
+	void m3(){
+		System.out.println("C M3() begins");
+		int x=10/3;
+		System.out.println("C M3() ends");
+		}
+		}*/
+	///////////////
+
+
+	
+	   /* static String str = "a";
+ 
+	    public static void main(String[] args) {
+	           new ExceptionHandling().method1();
+	           System.out.println(str);
+	    }
+	 
+	    void method1() {
+	           try {
+	                  method2();
+	           } catch (Exception e) {
+	                  str += "b";
+	                 
+	           }
+	    }
+	 
+	    void method2() throws Exception {
+	           try{
+	                  method3();
+	                  str += "c";
+	           }catch(Exception e){
+	                  throw new Exception();
+	           }finally{
+	                  str += "d";
+	           }
+	           method3();
+	           str += "e";
+	    }
+	 
+	    void method3() throws Exception {
+	           throw new Exception();
+	    }
+}*/
+	    
+//http://www.javamadesoeasy.com/2015/05/exceptions-top-60-interview-questions_75.html
+	////////////////////////
+	
+/*	  public static void main(String[] args) {
+          m(); //call recursive method m()
+          System.out.println("Code after exception handling");
+   }
+   
+   static void m() {
+          try {
+                 m();
+          } catch (StackOverflowError e) {
+                 e.printStackTrace();
+          }
+   }
+}*/
+	/////////////////////
+    public static void main(String[] args) {
+        int i=10/0;  
+        System.out.println("Did this line execute?");
+ }
+}

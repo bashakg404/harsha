@@ -1,0 +1,19 @@
+package com.demopractice.java;
+
+
+class Demo{
+	
+		public static void main(String args[]){
+		
+C c= new C();
+System.out.println();
+			System.out.println("----------");
+			
+	}
+class C {
+int num1=5;
+static int num2;
+
+
+}
+}

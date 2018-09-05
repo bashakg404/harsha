@@ -1,0 +1,151 @@
+package com.workbench.practice;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class CollectionExamples {
+	
+/*	///ArrayList Example//
+	public static void main(String[] args){
+		ArrayList<String> arraylist=new ArrayList<String>();
+		arraylist.add("basha");
+		arraylist.add("avi");
+		arraylist.add("java");
+		arraylist.add("spring");
+		Iterator iterator=arraylist.iterator();
+		while(iterator.hasNext()){
+			System.out.println(iterator.next()); //it will print all the strings
+		
+		System.out.println("arraylist:" +arraylist);
+		
+		System.out.println("print the next element after avi");
+		arraylist.add(1, "Welcome to Java");
+		System.out.println("arrayList:" +arraylist);
+		System.out.println("arraylist:" +arraylist.get(2));
+		System.out.println("arraylist:" +arraylist.contains("java"));
+		System.out.println("arraylist:" +arraylist.remove(3));
+		System.out.println(arraylist);
+		System.out.println("arraylist:" +arraylist.set(1, "Welcome to Spring"));
+		System.out.println(arraylist);
+		
+		ListIterator<String> listIterator=arraylist.listIterator();
+		listIterator.hasNext();
+		listIterator.hasPrevious();
+		while(listIterator.hasNext()){
+			System.out.println(listIterator.next());
+		while(listIterator.hasPrevious()){
+			System.out.println(listIterator.previous());
+			Enumeration<String> listEnum=Collections.enumeration(arraylist);
+			while(listEnum.hasMoreElements()){
+				System.out.println(listEnum.nextElement());
+			}
+		}
+		}
+		*/
+	///////collection interface//////
+/*public static void main(String[] args){
+	Collection collection=new ArrayList();
+	System.out.println(collection);
+    System.out.println("Size:" + collection.size());
+    System.out.println("Empty:" + collection.isEmpty());
+    System.out.println("---");
+    collection.add("basha");
+    collection.add("avi");
+    collection.add("pavan");
+    collection.add("sandy");
+    System.out.println("Collecction:" +collection.size());
+    System.out.println("Collection:" + collection.isEmpty());
+    System.out.println(collection);
+    //boolean iterator=collection.removeAll(collection);
+    System.out.println(collection);
+    System.out.println("collection:" + collection.contains("avi"));
+    System.out.println("Collection:" + collection.contains("hazi"));
+    System.out.println(collection);
+    System.out.println("Collection:" + collection.remove("Hazi"));
+    System.out.println("Collection:"+ collection.remove("sandy"));
+    System.out.println(collection);
+    collection.clear();
+    System.out.println("collection:" + collection.size());
+    Object arr[]=collection.toArray();
+    for(int i=0; i<=arr.length; i++){
+    	System.out.println(arr[i]);
+    	arr[i]="CGI";
+    }
+    System.out.println(collection);
+}
+	
+}*/
+///////////collection interface//////
+/*	public static void main(String[] args){
+		Collection collection=new ArrayList();
+		collection.add("java");
+		collection.add("jdbc");
+		collection.add("servlet");
+		collection.add("jsp");
+		System.out.println(collection);
+		Iterator iterator=collection.iterator();
+		while(iterator.hasNext()){
+			Object obj=iterator.next();
+			System.out.println(obj);
+			if(obj.equals("jsp")) 
+				iterator.remove();
+		}
+		System.out.println(collection);
+	
+		
+			}
+		Collection collection1=new ArrayList();
+		collection1.add("Spring");
+		collection1.add("hibernate");
+		collection1.add("rest");
+		collection1.add("soap");
+		System.out.println("Collection:" + collection.size());
+		System.out.println("Collection1:" + collection1.size());
+		collection.addAll(collection1);//collection.add(collection1);
+		System.out.println(collection +"\t" + collection.size());
+		}
+}
+*/
+///collection example//////
+	/*public static void main(String[] args){
+		Collection collection=new ArrayList();
+		List<String> arraylist=new ArrayList<String>();
+		collection.add("Java");
+		collection.add("JDBC");
+		collection.add("JSP");
+		collection.add("Servlet");
+		Collection collection1=new ArrayList();
+		collection1.add("Servlet");
+		collection1.add("JSP");
+		collection1.add("Java");
+		Collection collection2=new ArrayList();
+		collection2.add("JDBC");
+		collection2.add("EJB");
+		collection2.add("Spring");
+		System.out.println(collection + "\n" + collection1 + "\n" + collection2);
+		System.out.println(collection.containsAll(collection1));
+		System.out.println(collection.containsAll(collection2));
+		//List<String> synchronisationList= Collections.synchronizedList(arraylist);
+	}
+	}*/
+	
+	////unmodifiable list//////
+	public static void main(String[] args){
+		List<String> arraylist=new ArrayList<String>();
+		arraylist.add("cgi");
+		arraylist.add("tcs");
+		arraylist.add("ibm");
+		List<String> unmodifiableList=Collections.unmodifiableList(arraylist);
+		System.out.println(arraylist);
+		arraylist.add("wipro");
+		System.out.println("Collections Modified:" + arraylist);
+		/*try{
+			unmodifiableList.add("infosys");
+		}catch(Exception e){
+			System.out.println("UnspportedOperationException");
+		}*/
+		System.out.println("Coll:" + arraylist);
+		System.out.println(arraylist +"\t" +unmodifiableList);
+	}
+	} 

@@ -1,0 +1,31 @@
+	package com.basha.springdemo;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class AnnotationsBeanScopeDemoApp {
+
+	public static void main(String[] args) {
+		
+		//load the spring config file
+		ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		//retrive the beans from the container
+		Coach theCoach=context.getBean("tennisCoach", Coach.class);
+		
+		Coach alphaCoach=context.getBean("tennisCoach", Coach.class);
+		
+		//chach if they are same
+		boolean result= (theCoach==alphaCoach);
+		
+		//print the results
+		
+		System.out.println("\nPointing to the same object: " +result);
+		
+		System.out.println("\nMemory location for thCoach: "+ theCoach);
+		
+		System.out.println("\nMemory location for thCoach: "+ alphaCoach);
+
+		
+	}
+
+}

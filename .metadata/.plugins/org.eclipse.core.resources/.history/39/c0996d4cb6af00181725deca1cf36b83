@@ -1,0 +1,18 @@
+package com.demo.singleton;
+
+public class SingletonImplement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Hello{
+	private static Hello INS=new Hello();
+	private Hello(){}
+	public static Hello getHello(){
+		return INS;
+	}
+}

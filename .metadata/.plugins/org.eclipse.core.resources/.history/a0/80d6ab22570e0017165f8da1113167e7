@@ -1,0 +1,30 @@
+package com.demopractice.java;
+
+
+public class Demo{
+	
+		public static void main(String args[]){
+			String num2 = null;
+			System.out.println("num2:" +num2);
+			
+			System.out.println("----------");
+			/*System.out.println();
+			C obj1=new C();
+			C obj2=new C();
+			C obj3=new C();
+			C obj4=new C();
+			
+			obj1.num1=2;
+			obj2.num1=5;
+			obj3.num1=7; 
+			obj4.num2=7;
+			System.out.println("----------");
+			//System.out.println("num2:" +num2);
+*/	}
+	}
+class C {
+int num1=5;
+static int num2=10;
+
+
+}

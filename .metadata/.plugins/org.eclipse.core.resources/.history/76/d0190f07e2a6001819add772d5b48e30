@@ -1,0 +1,19 @@
+package com.demopractice.String;
+
+import java.util.Scanner;
+
+public class StringIntro {
+	
+	public static void main(String[] args){
+		
+		/*Scanner sc=new Scanner(System.in);
+		String A=sc.next();
+		String B=sc.next();
+		System.out.println(A.length());
+		System.out.println(A);*/
+		
+		String st="Basha";
+		System.out.println(st.length());
+	}
+
+}

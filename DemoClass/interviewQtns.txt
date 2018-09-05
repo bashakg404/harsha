@@ -73,3 +73,8 @@ Method Overloading
 --> Its used to reuse the code.
 --> Static methods cannot be overriden
 --> Return type should be same	
+
+DATABASE
+
+Find out the second highest salary
+--> select MAX(Salary) from Employee where salary<(Select MAX(Salary) from Employee);

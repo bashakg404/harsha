@@ -1,0 +1,14 @@
+127.0.0.1 - - [03/Aug/2018:10:42:37 -0400] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [03/Aug/2018:10:42:40 -0400] "GET /SessionDemoPractice/ HTTP/1.1" 200 631
+0:0:0:0:0:0:0:1 - - [03/Aug/2018:10:43:09 -0400] "POST /SessionDemoPractice/searchbooks.jlc HTTP/1.1" 200 2166
+0:0:0:0:0:0:0:1 - - [03/Aug/2018:10:43:16 -0400] "POST /SessionDemoPractice/addtocart.jlc HTTP/1.1" 200 2190
+0:0:0:0:0:0:0:1 - - [03/Aug/2018:10:43:22 -0400] "GET /SessionDemoPractice/showcart.jlc HTTP/1.1" 200 471
+0:0:0:0:0:0:0:1 - - [03/Aug/2018:10:43:24 -0400] "POST /SessionDemoPractice/removefromcart.jlc HTTP/1.1" 200 277
+127.0.0.1 - - [03/Aug/2018:10:48:25 -0400] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [03/Aug/2018:10:48:26 -0400] "GET /SessionDemoPractice/servlet/com.sessionmandemo.servlets.AddToCartServlet HTTP/1.1" 404 1138
+0:0:0:0:0:0:0:1 - - [03/Aug/2018:10:48:45 -0400] "GET /SessionDemoPractice HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [03/Aug/2018:10:48:46 -0400] "GET /SessionDemoPractice/ HTTP/1.1" 200 631
+0:0:0:0:0:0:0:1 - - [03/Aug/2018:10:48:58 -0400] "POST /SessionDemoPractice/searchbooks.jlc HTTP/1.1" 200 2166
+0:0:0:0:0:0:0:1 - - [03/Aug/2018:10:49:24 -0400] "POST /SessionDemoPractice/addtocart.jlc HTTP/1.1" 200 2187
+127.0.0.1 - - [03/Aug/2018:14:44:00 -0400] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [03/Aug/2018:14:44:03 -0400] "GET /spring-mvc-demo/ HTTP/1.1" 200 143

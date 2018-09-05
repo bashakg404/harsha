@@ -1,0 +1,17 @@
+package com.bookstore.ServJsp;
+
+public class Book {
+ protected int id;
+ protected String title;
+ protected String author;
+ protected float price;
+ 
+public Book(int id, String title, String author, float price) {
+	super();
+	this.id = id;
+	this.title = title;
+	this.author = author;
+	this.price = price;
+}
+ 
+}

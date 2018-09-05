@@ -1,0 +1,46 @@
+package com.datastructers.examples;
+
+public class DemoClass {
+
+	public static void main(String[] args) {
+
+		/*String s1=null;
+		s1="cgi";
+		String st=10+20+"AVI"+10+21+"Basha"+1+2+"Three"+3+4;
+		System.out.println(10+23+"Basha");
+		System.out.println(st);
+		System.out.println(s1);
+	}
+*/
+
+/*	int j=5;
+	int k=2;
+	for(int i=1;i>10;i++){
+		System.out.println("i:" +k +"\t" +"j:" +j);
+		System.out.println(k);
+	}
+	}*/
+		//====================
+		/*int x=21;
+		do{
+			System.out.println(x);
+			x++;
+		}
+			while(x<23);
+		}
+	}
+
+*/
+		
+		//==========
+	
+	
+	
+		int a = 20 ;
+		DemoClass.a =DemoClass.a+a ;
+		a = a + DemoClass.a ;
+		System.out.println(DemoClass.a);
+		System.out.println(a);
+		}
+		static int a = 10 ;
+		}

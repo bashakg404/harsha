@@ -1,0 +1,14 @@
+package com.demopractice.java;
+
+public class Demo {
+public static void main(String args[]) {
+//Hello h=new Hello();
+System.out.println(Hello.b);
+h.b=99;
+System.out.println(h.b);
+}
+}
+
+class Hello{
+	static int b=10;
+}

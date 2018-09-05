@@ -1,0 +1,8 @@
+1531751560011	Rename type 'DemoFilter'
+1531761562119	Move 'LoginSuccess.jsp' to 'WebContent'
+1531762126411	Rename type 'DemoServlet'
+1531764691859	Rename resource 'index.html'
+1531764791400	Move file
+1531764797740	Move 'LoginSuccess.jsp' to 'build'
+1531764844750	Move 'LoginSuccess.jsp' to 'WebContent'
+1531769346571	Rename package 'com.filterdemo.servlets'

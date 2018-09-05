@@ -1,0 +1,17 @@
+	package com.basha.springdemo;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class AnnotationsBeanScopeDemoApp {
+
+	public static void main(String[] args) {
+		
+		//load the spring config file
+		ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+		//retrive the beans from the container
+		
+		//call the methods
+
+	}
+
+}

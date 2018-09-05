@@ -24,8 +24,8 @@ List allows null elements, also it can allow many null objects.
 
 ARRAYLIST
 
-->If you want to access the elements frequently then we can use List interface. Also if you want to store the elements as you inserting 
-means then also List is a way to go.
+->If you want to access the elements frequently then we can use List interface. Also if you want to store the elements as you 
+inserting means then also List is a way to go.
 
 ->ArrayList and Vector classes implements RandomAccess interface so that any random element we can access with the same speed. 
 Hence ArrayList is the best choice of "retrieval operation".
@@ -45,7 +45,8 @@ VECTOR
 
 ->Every method present in Vector is synchronized and hence it is Thread safe.
 
-->By default vector object capacity is 10.Once its filled new vector object will be created ie, newcapacity=currentcapacity*2.(10*2=20)
+->By default vector object capacity is 10.Once its filled new vector object will be created ie, 
+newcapacity=currentcapacity*2.(10*2=20)
  
 FAIL FAST AND FAIL SAFE
 Fail-Fast means any structural modification done during iteration will throw ConcurrentModificationException.
@@ -77,15 +78,16 @@ The below classes are Fail-Safe iterator
 ****HASH MAP DEMO****
 
 -->Hash Map works on the principle of hashing.
--->Hashing is the process of indexing and retrieving the data in a data structure to provide faster way to finding the data using
-   hash Key.
+-->Hashing is the process of indexing and retrieving the data in a data structure to provide faster way to finding the data 
+using hash Key.
 -->HashMap maintains an array of buckets. each buckets is linked list of a private static inner class called an entry class.
 -->Hash map is used typically increase the performance of the large collection of data.
 
-EXAMPLE: Imagine a set of buckets are lined up in the floor, Some one hands you a paper with the movie name on it. You take the movie 
-name and calculate the hash code for each name of movie by calculating total no of characters in that name.
+EXAMPLE: Imagine a set of buckets are lined up in the floor, Some one hands you a paper with the movie name on it.
+You take the movie name and calculate the hash code for each name of movie by calculating total no of characters in that name.
 
-So now imagine that bucket represents the diff code number(Hashcode) and place the piece of paper into corresponding bucket according 
+So now imagine that bucket represents the diff code number(Hashcode) and place the piece of paper into corresponding bucket 
+according 
 to its Hashacode value.
 
 Here Movie LAGAAN has 6 letters so it will put into the bucket with the value 6.
@@ -100,15 +102,16 @@ So after some values here is the table looks like
 			BAHUBALI		8
 			
 SO now imagine someone comes up and shows you a name and says "please retrieve the the piece of paper that matches this name"
-So you look at the name they show you, and run the same hashcode-generating algorithm. The hashcode tells you which bucket you should 
-look to find the same.
+So you look at the name they show you, and run the same hashcode-generating algorithm. The hashcode tells you which bucket you 
+should look to find the same.
 
 EQUALS() METHOD:
-In above example you might noticed that two diff names may result in the same value. Such situation is known as Hashing Collision.
+In above example you might noticed that two diff names may result in the same value. Such situation is known as Hashing 
+Collision.
 
 For example LAGAAN and DANGAL have the same number of letters so hashcode will be identical for both the names. Thats fine.
-But it means someone asks you for the LAGAAN piece of paper, you still have to search through the target bucket reading each name
-until you find the LAGAAN rather than DANGAL.
+But it means someone asks you for the LAGAAN piece of paper, you still have to search through the target bucket reading each 
+name until you find the LAGAAN rather than DANGAL.
 
 The hash code tells you only about which to go into, but not how to locate the name once we are in the bucket. 
 In such cases, EQUALS() method is used to locate the exact match.
@@ -119,7 +122,8 @@ How Put() Method Works Internally?
 -->Using hashCode() method, hash value will be calculated. Using that hash it will be ascertained, 
 	in which bucket particular entry will be stored.
 -->equals() method is used to find if such a key already exists in that bucket, 
-	if no then a new node is created with the map entry and stored within the same bucket. A linked-list is used to store those nodes.
+	if no then a new node is created with the map entry and stored within the same bucket.
+	 A linked-list is used to store those nodes.
 -->If equals() method returns true, which means that the key already exists in the bucket. 
 	In that case, the new value will overwrite the old value for the matched key.
 
@@ -132,8 +136,8 @@ How Get() Method Works Internally?
   SORT The Elements
  
  -->List is the best way to sort the elements because it has one method Collections.sort()
- -->You Cannot sort HashSet elements as by default its not maintaining any order so if you want to sort it first convert it to List
- and then go for sort.
+ -->You Cannot sort HashSet elements as by default its not maintaining any order so if you want to sort it first convert 
+ it to List and then go for sort.
  -->Even we have LinkedHashSet and TreeSet it will give you the sorted order by default.
  
  COMPARATOR and COMPARABLE
@@ -141,4 +145,5 @@ How Get() Method Works Internally?
 --> Comparator(Has two methods equals and compare) can be used to compare instances of different classes. 
 --> Comparable(Has One method compareTo) is implemented by class which need to define a natural ordering for its objects. 
  	Like String implements Comparable. 
---> In case one wants a different sorting order then he can implement comparator and define its own way of comparing two instances.
+--> In case one wants a different sorting order then he can implement comparator and define its own way of comparing two 
+instances.

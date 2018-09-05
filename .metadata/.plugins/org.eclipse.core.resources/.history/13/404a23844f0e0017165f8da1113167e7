@@ -1,0 +1,33 @@
+package com.demopractice.java;
+
+public class A {
+
+	int y=8;
+	
+	static int z = 9;
+	
+
+	public static void m1(){
+		System.out.println("method m1()");
+		
+	}
+	
+	public static void main(String[] args) {
+		A a=new A();
+
+	System.out.println(a.y);
+		
+	
+
+	}
+
+
+
+
+	
+	
+		
+		
+		
+	}
+

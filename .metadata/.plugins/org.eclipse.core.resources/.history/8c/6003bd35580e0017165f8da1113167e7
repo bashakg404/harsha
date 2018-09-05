@@ -1,0 +1,19 @@
+package com.demopractice.java;
+
+
+class Demo{
+	
+		public static void main(String args[]){
+		
+Hello h= new Hello();
+System.out.println();
+			System.out.println("----------");
+			
+	}
+class Hello {
+//int num1=5;
+static int num2;
+
+
+}
+}

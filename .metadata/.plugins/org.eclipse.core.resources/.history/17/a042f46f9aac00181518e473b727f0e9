@@ -1,0 +1,22 @@
+package com.demo.methodoverriding;
+
+public class MethodOverride {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
+
+
+class Bike{
+	void m1(){
+		System.out.println("Bike is running");
+	}
+}
+
+class Bullet extends Bike{
+	void m1(){
+		System.out.println("Bullet running very fastly");
+	}
+}

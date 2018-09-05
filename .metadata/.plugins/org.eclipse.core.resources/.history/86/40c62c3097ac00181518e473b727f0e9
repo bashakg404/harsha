@@ -1,0 +1,38 @@
+package com.demo.dynamicdispatch;
+
+public class Vehicle {
+	
+	public static void main(String[] args){
+		
+		Vehicle v=new Vehicle();
+		//Vehicle v1=new Car(); //not valid
+		//Car c=new Car();
+		
+		System.out.println("In Main");
+		
+		class A{}
+		class B extends A{}
+		class C extends A{}
+		class D extends B{}
+		class E extends D{}
+		
+		
+		A ob= new A(); //Valid
+		A ob1= new B(); //Valid
+		A ob2= new D(); //Valid
+		B ob3= new B(); //Valid
+		B ob4= new A(); //Invalid
+		B ob5= new C(); //Invalid
+		B ob6= new D(); //Valid
+		D ob7= new A(); //Invalid
+		A ob8= new E(); //Valid
+	}
+
+	class Car extends Vehicle{
+		Vehicle v=new Vehicle();
+		Vehicle v1=new Car();
+		Car c=new Car();
+	}
+	
+	
+}

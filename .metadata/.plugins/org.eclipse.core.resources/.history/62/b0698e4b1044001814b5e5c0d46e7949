@@ -1,0 +1,73 @@
+package com.workbench.practice;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
+public class CollectionExamples {
+	
+/*	///ArrayList Example//
+	public static void main(String[] args){
+		ArrayList<String> arraylist=new ArrayList<String>();
+		arraylist.add("basha");
+		arraylist.add("avi");
+		arraylist.add("java");
+		arraylist.add("spring");
+		Iterator iterator=arraylist.iterator();
+		while(iterator.hasNext()){
+			System.out.println(iterator.next()); //it will print all the strings
+		
+		System.out.println("arraylist:" +arraylist);
+		
+		System.out.println("print the next element after avi");
+		arraylist.add(1, "Welcome to Java");
+		System.out.println("arrayList:" +arraylist);
+		System.out.println("arraylist:" +arraylist.get(2));
+		System.out.println("arraylist:" +arraylist.contains("java"));
+		System.out.println("arraylist:" +arraylist.remove(3));
+		System.out.println(arraylist);
+		System.out.println("arraylist:" +arraylist.set(1, "Welcome to Spring"));
+		System.out.println(arraylist);
+		
+		ListIterator<String> listIterator=arraylist.listIterator();
+		listIterator.hasNext();
+		listIterator.hasPrevious();
+		while(listIterator.hasNext()){
+			System.out.println(listIterator.next());
+		while(listIterator.hasPrevious()){
+			System.out.println(listIterator.previous());
+			Enumeration<String> listEnum=Collections.enumeration(arraylist);
+			while(listEnum.hasMoreElements()){
+				System.out.println(listEnum.nextElement());
+			}
+		}
+		}
+		*/
+	
+public static void main(String[] args){
+	Collection collection=new ArrayList();
+	System.out.println(collection);
+    System.out.println("Size:" + collection.size());
+    System.out.println("Empty:" + collection.isEmpty());
+    System.out.println("---");
+    collection.add("basha");
+    collection.add("avi");
+    collection.add("pavan");
+    collection.add("sandy");
+    System.out.println("Collecction:" +collection.size());
+    System.out.println("Collection:" + collection.isEmpty());
+    System.out.println(collection);
+    //boolean iterator=collection.removeAll(collection);
+    System.out.println(collection);
+    System.out.println("collection:" + collection.contains("avi"));
+    System.out.println("Collection:" + collection.contains("hazi"));
+    System.out.println(collection);
+    System.out.println("Collection:" + collection.remove("Hazi"));
+    System.out.println("Collection:"+ collection.remove("sandy"));
+    System.out.println(collection);
+    collection.clear();
+    System.out.println("collection:" + collection.size());
+}
+	
+}
+

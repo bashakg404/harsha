@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;WorkBench/src/com/workbench/practice/singleTon&apos; to &apos;singleTon.txt&apos;" description="Rename resource &apos;singleTon&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/workbench/practice/singleTon" name="singleTon.txt" stamp="1528730586732" updateReferences="true"/>
+</session>

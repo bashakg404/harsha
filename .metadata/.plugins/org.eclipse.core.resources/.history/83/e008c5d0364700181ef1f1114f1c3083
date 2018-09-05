@@ -1,0 +1,502 @@
+package com.workbench.practice;
+
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.TreeSet;
+
+public class CollectionExamples {
+	
+/*	///ArrayList Example//
+	public static void main(String[] args){
+		ArrayList<String> arraylist=new ArrayList<String>();
+		arraylist.add("basha");
+		arraylist.add("avi");
+		arraylist.add("java");
+		arraylist.add("spring");
+		Iterator iterator=arraylist.iterator();
+		while(iterator.hasNext()){
+			System.out.println(iterator.next()); //it will print all the strings
+		
+		System.out.println("arraylist:" +arraylist);
+		
+		System.out.println("print the next element after avi");
+		arraylist.add(1, "Welcome to Java");
+		System.out.println("arrayList:" +arraylist);
+		System.out.println("arraylist:" +arraylist.get(2));
+		System.out.println("arraylist:" +arraylist.contains("java"));
+		System.out.println("arraylist:" +arraylist.remove(3));
+		System.out.println(arraylist);
+		System.out.println("arraylist:" +arraylist.set(1, "Welcome to Spring"));
+		System.out.println(arraylist);
+		
+		ListIterator<String> listIterator=arraylist.listIterator();
+		listIterator.hasNext();
+		listIterator.hasPrevious();
+		while(listIterator.hasNext()){
+			System.out.println(listIterator.next());
+		while(listIterator.hasPrevious()){
+			System.out.println(listIterator.previous());
+			Enumeration<String> listEnum=Collections.enumeration(arraylist);
+			while(listEnum.hasMoreElements()){
+				System.out.println(listEnum.nextElement());
+			}
+		}
+		}
+		*/
+	///////collection interface//////
+/*public static void main(String[] args){
+	Collection collection=new ArrayList();
+	System.out.println(collection);
+    System.out.println("Size:" + collection.size());
+    System.out.println("Empty:" + collection.isEmpty());
+    System.out.println("---");
+    collection.add("basha");
+    collection.add("avi");
+    collection.add("pavan");
+    collection.add("sandy");
+    System.out.println("Collecction:" +collection.size());
+    System.out.println("Collection:" + collection.isEmpty());
+    System.out.println(collection);
+    //boolean iterator=collection.removeAll(collection);
+    System.out.println(collection);
+    System.out.println("collection:" + collection.contains("avi"));
+    System.out.println("Collection:" + collection.contains("hazi"));
+    System.out.println(collection);
+    System.out.println("Collection:" + collection.remove("Hazi"));
+    System.out.println("Collection:"+ collection.remove("sandy"));
+    System.out.println(collection);
+    collection.clear();
+    System.out.println("collection:" + collection.size());
+    Object arr[]=collection.toArray();
+    for(int i=0; i<=arr.length; i++){
+    	System.out.println(arr[i]);
+    	arr[i]="CGI";
+    }
+    System.out.println(collection);
+}
+	
+}*/
+///////////collection interface//////
+/*	public static void main(String[] args){
+		Collection collection=new ArrayList();
+		collection.add("java");
+		collection.add("jdbc");
+		collection.add("servlet");
+		collection.add("jsp");
+		System.out.println(collection);
+		Iterator iterator=collection.iterator();
+		while(iterator.hasNext()){
+			Object obj=iterator.next();
+			System.out.println(obj);
+			if(obj.equals("jsp")) 
+				iterator.remove();
+		}
+		System.out.println(collection);
+	
+		
+			}
+		Collection collection1=new ArrayList();
+		collection1.add("Spring");
+		collection1.add("hibernate");
+		collection1.add("rest");
+		collection1.add("soap");
+		System.out.println("Collection:" + collection.size());
+		System.out.println("Collection1:" + collection1.size());
+		collection.addAll(collection1);//collection.add(collection1);
+		System.out.println(collection +"\t" + collection.size());
+		}
+}
+*/
+///collection example//////
+	/*public static void main(String[] args){
+		Collection collection=new ArrayList();
+		List<String> arraylist=new ArrayList<String>();
+		collection.add("Java");
+		collection.add("JDBC");
+		collection.add("JSP");
+		collection.add("Servlet");
+		Collection collection1=new ArrayList();
+		collection1.add("Servlet");
+		collection1.add("JSP");
+		collection1.add("Java");
+		Collection collection2=new ArrayList();
+		collection2.add("JDBC");
+		collection2.add("EJB");
+		collection2.add("Spring");
+		System.out.println(collection + "\n" + collection1 + "\n" + collection2);
+		System.out.println(collection.containsAll(collection1));
+		System.out.println(collection.containsAll(collection2));
+		//List<String> synchronisationList= Collections.synchronizedList(arraylist);
+	}
+	}*/
+	
+	////unmodifiable list//////
+	/*public static void main(String[] args){
+		List<String> arraylist=new ArrayList<String>();
+		arraylist.add("cgi");
+		arraylist.add("tcs");
+		arraylist.add("ibm");
+		List<String> unmodifiableList=Collections.unmodifiableList(arraylist);
+		System.out.println(arraylist);
+		arraylist.add("wipro");
+		System.out.println("Collections Modified:" + arraylist);
+		try{
+			unmodifiableList.add("infosys");
+		}catch(Exception e){
+			System.out.println("UnspportedOperationException");
+		}
+		System.out.println("Coll:" + arraylist);
+		System.out.println(arraylist +"\t" +unmodifiableList);
+		System.out.println("=======");
+	}
+	} */
+	/////////////exploring List Interface///////
+	
+	/*public static void main(String[] args){
+	List list=new ArrayList();
+	list.add("MI");
+	list.add("KIXP");
+	list.add("CSK");
+	list.add("RCB");
+	list.add("SRH");
+	list.add("RR");
+	list.add("DD");
+	list.add("KKR");
+	System.out.println("IPL Started:" + list);
+	list.add(0, "KIXP");
+	System.out.println("IPL Playoff:" + list);
+	list.remove(2);
+	System.out.println("Playoff Qualified:" +list);
+	list.set(1, "RCB");
+	System.out.println("Playoff:" + list);
+	Object obj=list.get(1);
+	System.out.println("2nd Team to reach playoff:" +obj);
+	System.out.println(list);
+	int x=list.indexOf("SRH");
+	System.out.println(x);
+	int y=list.lastIndexOf("RCB");
+	System.out.println(y);
+	List list1=list.subList(2, 5);
+	System.out.println(list1);
+}}*/
+////list Iterator Interface///
+/*public static void main(String[] args){
+	List list=new ArrayList();
+	list.add("JDBC");
+	list.add("Servlet");
+	list.add("Jsp");
+	list.add("Hibernate");
+	ListIterator iter=list.listIterator();
+	System.out.println(list);
+	int size=list.size();
+	list.remove(1);
+	list.remove("JSP");
+	System.out.println(list);
+	 System.out.println(size);
+	for(int i=0; i<=size;i++){
+		System.out.println(iter.next());
+		System.out.println(list);
+	}
+	 while(iter.hasNext()){
+		 Object obj=iter.next();
+		 System.out.println(obj);
+		 if(obj.equals("Jsp")) iter.remove();
+		 else if(obj.equals("JDBC")) iter.set("Spring");
+		 else if(obj.equals("Hibernate")) iter.add("EJB");
+	 }
+	 System.out.println(list);
+}
+	
+}*/
+/*	
+	public static void main(String[] args){
+		List list=new ArrayList();
+		list.add("RCB");
+		list.add("CSK");
+		list.add("KIXP");
+		list.add("SRH");
+		list.add("RR");
+		list.add("KKR");
+		list.add("MI");
+		list.add("MI");
+		list.add("DD");
+		ListIterator lisit=list.listIterator();
+		System.out.println("Forwrd order");
+		while(lisit.hasNext()){
+			int index=lisit.nextIndex();
+			Object obj=lisit.next();
+			System.out.println(index+ "\t" +obj);
+			
+		}
+		System.out.println("Reverse Order");
+		while(lisit.hasPrevious()){
+			int index=lisit.previousIndex();
+			Object obj=lisit.previous();
+			System.out.println(index+"\t" + obj);
+		}
+		}
+	}*/
+	
+	///////Exploring Set Interface/////////
+/*	public static void main(String[] args){
+		//HashSet set = new HashSet();//will produce unordered output
+		LinkedHashSet set=new LinkedHashSet();//will produce same output as you given and it will produce both int & char values
+		//TreeSet set=new TreeSet();//will produce the output in alphabetical order
+		set.add("CSK");
+		set.add("SRH");
+		set.add("MI");
+		set.add("RR");
+		set.add("RCB");
+		set.add("DD");
+		set.add("KIXP");
+		set.add(new Integer(99));
+		set.add(new Long(69));
+		set.add(new Byte((byte)65));
+		set.add("KKR");
+		//System.out.println("HashSet:" + set);
+		System.out.println("LinkedhashSet output:" + set);
+		//System.out.println("Treeset output:" + set);
+		
+		}}*/
+////override to string///
+/*public static void main(String[] args){
+	HashSet set=new HashSet();
+	set.add(new Student(99));
+	set.add(new Student(99));
+	set.add(new Student(99));
+	set.add(new Student(99));
+	System.out.println(set);
+}}
+class Student{
+	int sid;
+	Student(int sid){
+		this.sid=sid;
+	}
+	public String toString(){
+		return ""+sid;
+	}
+	public int hashCode(){
+		System.out.println("hash cde");
+		return sid;
+	}
+	public boolean equals(Object obj){
+		System.out.println("equals");
+		if(obj instanceof Student){
+			Student st=(Student)obj;
+			return this.sid==st.sid;
+			
+		}
+		 return false;
+	}
+}
+*/
+	/////////tree set examples////////////
+/*	public static void main(String args[]){
+		TreeSet ts=new TreeSet();
+		ts.add(14);
+		ts.add(1);
+		ts.add(13);
+		ts.add(10);
+		ts.add(9);
+		ts.add(3);
+		ts.add(11);
+		ts.add(6);
+		ts.add(5);
+		System.out.println(ts);
+		Set ts1=ts.descendingSet();
+		System.out.println(ts1);
+		System.out.println("Ascending iterator");
+		Iterator it=ts.iterator();
+		while(it.hasNext())
+			System.out.println(it.next());
+		System.out.println("Descending Iterator");
+		Iterator it1=ts.descendingIterator();
+		while(it1.hasNext())
+			System.out.println(it1.next());
+		System.out.println("SUBSET");
+		System.out.println(ts.subSet(3, 11));
+		System.out.println(ts.subSet(4, true, 9, true));
+		System.out.println(ts.subSet(5, true, 11, false));
+		System.out.println("HEADSET");
+		System.out.println(ts.headSet(9));
+		System.out.println(ts.headSet(9, true));
+		System.out.println(ts.headSet(3));
+		System.out.println("TAILSET");
+		System.out.println(ts.tailSet(11));
+		System.out.println(ts.tailSet(9,false));
+		System.out.println(ts);
+		System.out.println("polFirst/Last");
+		System.out.println(ts.pollFirst());
+		System.out.println(ts);
+		System.out.println(ts.pollLast());
+		System.out.println(ts);
+		System.out.println("Lower");
+		System.out.println(ts.lower(9));
+		System.out.println(ts.lower(1));
+		System.out.println("higher");
+		System.out.println(ts.higher(8));
+		System.out.println(ts.higher(11));
+		System.out.println(ts.higher(6));
+		System.out.println("CEILING");
+		System.out.println(ts.ceiling(4));
+		System.out.println(ts.ceiling(13));
+		System.out.println("floor");
+		System.out.println(ts.floor(9));
+		System.out.println(ts.floor(7));
+		
+	}}
+*/
+/*	public static void main(String args[]){
+		ArrayList list=new ArrayList();
+		list.add("DMOB2D-011");
+		list.add("DMOB2D-D03");
+		list.add("DMOB2D-D08");
+		list.add("MTRLPQDC2AV-020");
+		list.add("TOROONDC27X-010");
+		list.add("TOROONDC27X-016");
+		list.add("TOROONDC27X-053");
+		list.add("TOROONDC199-012");
+		list.add("TOROONDC25K-026");
+	    list.add("TOROONDC199-009");
+		list.add("DMOB2D-D04");
+		list.add("DMOB2D-012");
+	    list.add("DMOB2D-D09");
+		list.add("MTRLPQDC2AV-021");
+		list.add("MTRLPQDC2AV-022");
+		list.add("TOROONDC27X-011");
+		list.add("TOROONDC27X-017");
+	    list.add("TOROONDC27X-018");
+	    list.add("TOROONDC27X-054");
+		list.add("TOROONDC199-013");
+		list.add("TOROONDC25K-027");
+		System.out.println("original list:" + list);
+		list.add("DMOB2D-D08");
+		list.add("DMOB2D-011");
+		list.add("DMOB2D-012");
+		list.add("DMOB2D-D03");
+		list.add("DMOB2D-D09");
+		list.add("MTRLPQDC2AV-020");
+		list.add("MTRLPQDC2AV-021");
+		list.add("MTRLPQDC2AV-022");
+		list.add("TOROONDC199-009");
+		list.add("TOROONDC199-012");
+		list.add("TOROONDC199-013");
+		list.add("TOROONDC199-019");
+		list.add("TOROONDC25K-026");
+		list.add("TOROONDC25K-027");
+		list.add("TOROONDC27X-010");
+		list.add("TOROONDC27X-011");
+		list.add("DMOB2D-D04");
+		list.add("TOROONDC27X-016");
+		list.add("TOROONDC27X-017");
+		list.add("TOROONDC27X-018");
+		list.add("TOROONDC27X-053");
+		list.add("TOROONDC27X-054");
+		list.add("TOROONDC199-009");
+		list.add("TOROONDC199-012");
+		list.add("TOROONDC199-013");
+		list.add("TOROONDC199-019");
+		list.add("TOROONDC25K-026");
+		list.add("TOROONDC25K-027");
+		list.add("TOROONDC27X-010");
+		list.add("TOROONDC27X-011");
+		
+		for (int x=0; x<list.size(); x++){
+			System.out.println("ArrayList:" + list.get(x));
+			
+		}
+ Set set=new TreeSet();
+ set.addAll(list);
+ Iterator it=set.iterator();
+ System.out.println("Duplicate servers");
+ while(it.hasNext()){
+	 
+	 System.out.println("Set:" +(String)it.next());
+ }
+	}}*/
+	///////////Comparable class example/////////
+/*	public static void main(String args[]){
+		System.out.println("Student info");
+		TreeSet set=new TreeSet();
+		set.add(new Student());
+		set.add(new Student());
+		set.add(new Student());
+		set.add(new Student());
+		set.add(new Student(402, "Mainu"));
+		set.add(new Student(403, "Anjali"));
+		set.add(new Student(404, "Shabbir"));
+		set.add(new Student(405, "Anjali"));
+		set.add(new Student(406, "Suhana"));
+	}}
+class Student{}
+
+		Iterator it=set.iterator();
+		while(it.hasNext())
+			System.out.println(it.next());
+		
+	}
+}
+class Student implements Comparable{
+	int sid;
+	String name;
+	Student(int sid, String name){
+		this.sid=sid;
+		this.name=name;
+	}
+	public int compareTo(Object obj){
+		if(obj instanceof Student){
+			Student st=(Student)obj;
+			//return this.sid-st.sid;
+			return this.name.compareTo(st.name);
+		}
+		return 0;
+	}
+	public String toString(){
+		return sid +"\t" +name;
+		
+		}
+		
+	}
+*/
+	//////////Exploring comparator class//////////
+	public static void main(String[] args){
+		TreeSet set=new TreeSet(new SidComparator());
+		System.out.println("main start");
+		set.add(new Student(101, "Avi"));
+		set.add(new Student(101, "Basha"));
+		set.add(new Student(101, "Pavan"));
+		set.add(new Student(101, "Kotresh"));
+		set.add(new Student(101, "Shashi"));
+		set.add(new Student(101, "Pammi"));
+		Iterator it=set.iterator();
+		while(it.hasNext()){
+			System.out.println(it.next());
+		System.out.println("main method end");
+		
+	}}}
+class Student{
+	int sid;
+	String name;
+	Student(int sid, String name){
+		this.sid=sid;
+		this.name=name;
+		System.out.println("end of constructor");
+	}
+	public String toString(){
+		return sid+"\t" + name;
+		
+	}
+	class SidComparator implements Comparator{
+		public int compare(Object obj1, Object obj2){
+			if(obj1 instanceof Student && obj2 instanceof Student){
+				Student st1=(Student)obj1;
+				Student st2=(Student)obj2;
+				return st1.sid-st2.sid;
+				
+			}
+			return 0;
+			
+		}
+	}
+	
+}
