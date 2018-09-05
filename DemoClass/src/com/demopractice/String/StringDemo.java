@@ -40,6 +40,16 @@ public class StringDemo {
 		
 		System.out.println(s1==s2);
 		System.out.println(s1.equals(s2));
+		
+		//compare example
+		String str="Basha";
+		String str1="Basha";
+		String str2=null;
+		String str3=new String("Basha");
+		System.out.println(str==str3);//it will compare the hashcode of the objects
+		System.out.println(str.equals(str3));//it will compare string literals
+		System.out.println(str==str2);
+		System.out.println(str.equals(str2));
 		*/
 		
 		//concat means addition of strings 
@@ -93,7 +103,7 @@ public class StringDemo {
 		System.out.println(charmap);*/
 		
 		//String methods
-		String str="I am doing Java course in JLC BTM and its best Java institute";
+		/*String str="I am doing Java course in JLC BTM and its best Java institute";
 		String st1=str.trim();
 		System.out.println(str+"\t" +st1);
 		System.out.println(str.length()+"\n" +st1.length());
@@ -102,7 +112,27 @@ public class StringDemo {
 		for(int i=0; i<res.length; i++){
 			String st=res[i];
 			System.out.println("for:"+i +"\t" +st);
-		}
+		}*/
+	
+		//Typecasting
+		int y=45;
+		byte b=10;
+		short s=b;
+		int a=s;
+		long x=a;
+		float f=x;
+		double d=f;
+		System.out.println(b);
+		System.out.println(s);
+		System.out.println(a);
+		System.out.println(x);
+		System.out.println(f);
+		System.out.println(d);
+		char ch=(char)y;
+		byte z=(byte)y;
+		System.out.println("Cha:" +ch);
+		System.out.println("Cha:" +z);
 		
-	}
+		
+		}
 }

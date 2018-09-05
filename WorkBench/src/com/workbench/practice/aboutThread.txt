@@ -26,5 +26,5 @@ from running to waiting state.
 
 --> Synchronization is used to overcome from race condition
 
---> Join Method is important method in Multithreading it will ensure all the threads that started from main 
+--> Join Method is important method in Multi threading it will ensure all the threads that started from main 
 must end in order in which they started and also main should end last

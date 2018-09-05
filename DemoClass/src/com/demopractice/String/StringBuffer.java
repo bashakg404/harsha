@@ -1,0 +1,15 @@
+package com.demopractice.String;
+
+public class StringBuffer {
+
+	public static void main(String[] args) {
+		String str="Basha";
+		StringBuilder st=new StringBuilder("Basha");
+		//System.out.println(str==st);
+		System.out.println(str.hashCode());
+		System.out.println(st.hashCode());
+		System.out.println(str.equals(st));
+		System.out.println(str.contentEquals(st));
+	}
+
+}

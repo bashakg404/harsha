@@ -25,3 +25,11 @@ This annotation is responsible for the database table modification, means if you
 we are applying to entity class that will also applied to related entity class.
 In this example if you make changes in Instructor table that will make changes in Instructor Details table as well. 
 Remember By default no operations are Cascaded.
+
+**Transaction Management**
+--> Any application which needs to be achieve Transaction Management succefully need to obey the below ACID properties
+	A--> Atomicity==> It will ensure either all the operations can be done or all operations can be undone.
+	C--> Consistancy==> After the transactions completed successfully the data in the Data source should be reliable data.
+	I--> Isolation==> If two transactions are going on the same data, one will not disturb another
+	D--> Durability==> After a transaction is completed, 
+	the data in the datastore will be permanent until another transaction is going to be performed on that data

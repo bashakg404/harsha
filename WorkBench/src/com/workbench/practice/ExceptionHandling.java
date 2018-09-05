@@ -8,7 +8,7 @@ public class ExceptionHandling {
 
 	//Exceptions//
 	 
-/*	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		int a, b, result;
 		Scanner input = new Scanner(System.in);
 		System.out.println("Input two integers");
@@ -22,15 +22,15 @@ public class ExceptionHandling {
 			System.out.println("Exception occures: Divided by Zero.");
 		}
 	}
-}
-*/
-
-	/*public static void main(String args[]){
+}*/
+/*
+	//finally example
+	public static void main(String args[]){
 		String Languages[]={ "C", "C++", "Java", "Spring", "Python"};
 		
 		
 		try{
-			for(int d=1; d<=5; d++){
+			for(int d=0; d<=5; d++){
 				System.out.println(Languages[d]);
 			}
 		}
@@ -45,7 +45,7 @@ public class ExceptionHandling {
 		}
 	}*/
 	//Checked Exception But not good Practice//
-/*	public static void main(String[] args) throws IOException{
+	/*public static void main(String[] args) throws IOException{
 		FileInputStream fileinputstream= null;
 		fileinputstream= new FileInputStream("C:/Users/bashasab.gudimani/Desktop/text.txt");
 		int k;
@@ -58,9 +58,10 @@ public class ExceptionHandling {
 		}
 		
 	}*/
+	
 	//Checked Exception Best Practice//
 	
-/*	public static void main(String[] args){
+	/*public static void main(String[] args){
 		FileInputStream fis=null;
 		try{
 			fis=new FileInputStream("C:/Users/bashasab.gudimani/Desktop/text.txt");
@@ -80,12 +81,12 @@ public class ExceptionHandling {
 			
 		}
 		
-	}}*/
-
+	}}
+*/
 
 	//UNCHECKED EXCEPTION//
 	
-/*	public static void main(String args[]){
+	/*public static void main(String args[]){
 		int num1=20;
 		int num2=0;
 		int result=num1/num2;
