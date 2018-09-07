@@ -30,7 +30,7 @@ inserting means then also List is a way to go.
 ->ArrayList and Vector classes implements RandomAccess interface so that any random element we can access with the same speed. 
 Hence ArrayList is the best choice of "retrieval operation".
 
-->Arraylist is not synchronized.
+->ArrayList is not synchronized.
 
 ->If insertion/deletion operation is in the middle then Arraylist is worst choice,
  because it has to do lot of shifting operation to perform to provide the output. To overcome we have LINKEDLIST.

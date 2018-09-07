@@ -1,0 +1,18 @@
+Section 66**Spring REST Curd DB Real Time Project--Add Customer
+
+Here we are adding a new customer using REST
+
+POST--->Create
+GET---->READ
+PUT---->Update
+DELETE->Delete
+
+-->Jackson will convert request body from JSON to POJO
+@RequestBody-->It will binds the POJO to a given method parameter in given parameter in controller
+@RequestBody Customer theCustomer means now we can access the request body as POJO
+
+
+
+IMPORTANT: In Hibernate
+currentSession.SaveOrUpdate means if primary key is empty(0 or null) then insert new Customer else update the customer.
+										

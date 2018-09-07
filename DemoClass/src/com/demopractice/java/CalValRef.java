@@ -2,7 +2,7 @@ package com.demopractice.java;
 
 public class CalValRef {
 public static void main(String args[]){
-/*	int a=99;
+	int a=99;
 	CBVR cbvr=new CBVR();
 
 	System.out.println("main begins:"+a);
@@ -16,8 +16,8 @@ class CBVR{
 		a=a+10;
 		System.out.println("method m1() ends:"+a);
 	}
-}*/
-	
+}
+	/*
       Ref ref=new Ref();
       System.out.println("entering ref class");
       ref.a=11;
@@ -46,4 +46,4 @@ class CBVR{
 
 	}
 	
-	
+	*/

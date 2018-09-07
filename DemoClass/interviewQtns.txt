@@ -78,3 +78,15 @@ DATABASE
 
 Find out the second highest salary
 --> select MAX(Salary) from Employee where salary<(Select MAX(Salary) from Employee);
+
+select dept names who have more than 2 employees whose salary is greater than 1000
+-->SELECT D.DeptName FROM
+Department D WHERE (SELECT COUNT(*) 
+                    FROM Employee E 
+                    WHERE E.DeptID = D.DeptID AND
+                            E.Salary > 1000) > 2
+Highest Salary in each department
+--> Select DeptId, Max(Salary) from EmpDetails Group By DeptID
+
+
+
