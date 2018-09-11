@@ -26,7 +26,7 @@ POLYMORPHISM
 
 ** When we make class as a final?
 --> To prevent inheritance.
---> A final class is simply a class which cant be extended/instantiated/subclassed.
+--> A final class is simply a class which can't be extended/instantiated/subclassed.
 --> This is done for reasons of security and efficiency.
 
 ** How can you convert String as an integer

@@ -5,6 +5,7 @@ public class Vehicle {
 	public static void main(String[] args){
 		
 		Vehicle v=new Vehicle();
+	
 		//Vehicle v1=new Car(); //not valid
 		//Car c=new Car();
 		

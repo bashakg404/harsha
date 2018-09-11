@@ -1,0 +1,20 @@
+package com.datastructerstring.examples;
+
+public class LengthOfLastWord {
+
+	public static void main(String[] args) {
+		String str = "Hello Hi";
+		int result = lengthOfLastWord(str);
+		System.out.println("the length of the last word is "+ result);
+	}
+	
+	private static int lengthOfLastWord(String str){
+		int spaceIndex = str.lastIndexOf(" ");
+		
+		if(spaceIndex <1)
+			return 0;
+		int len = str.length();
+		return len-spaceIndex-1;
+	}
+
+}

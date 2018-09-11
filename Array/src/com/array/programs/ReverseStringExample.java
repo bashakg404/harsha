@@ -43,7 +43,7 @@ public class ReverseStringExample {
 	private static String stringReversed(String inputString){
 		char [] ar= inputString.toCharArray();
 		char temp;
-		for(int i=0, j=ar.length-1; i<(ar.length)/2; i++, j--){
+		for(int i=0, j=ar.length-1; i<(ar.length/2); i++, j--){
 			System.out.println(ar[i]);
 			temp=ar[i];
 			ar[i]=ar[j];

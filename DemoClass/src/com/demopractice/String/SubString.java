@@ -19,6 +19,11 @@ public class SubString {
 		System.out.println(s1[0].length());
 		System.out.println(s1[1].equals(s1[2]));
 		System.out.println(s1[1]==s1[2]);
+	
+		
+		int a=19;
+		int b=a++;
+		System.out.println("NNN:" + b);
 		
 	}
 }

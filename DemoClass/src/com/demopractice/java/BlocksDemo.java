@@ -48,6 +48,7 @@ class Hai{
 	}
 	
 	//3rd Part
+	
 	int i;
 	static int j;
 	static{

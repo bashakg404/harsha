@@ -11,7 +11,7 @@ public class StringDemo {
 		
 		// string with and without new operator
 		
-		/*//without new
+		//without new
 		
 		String st1="Basha";
 		String st2="Basha";
@@ -50,23 +50,23 @@ public class StringDemo {
 		System.out.println(str.equals(str3));//it will compare string literals
 		System.out.println(str==str2);
 		System.out.println(str.equals(str2));
-		*/
+		
 		
 		//concat means addition of strings 
 		
-		/*String str="JLC JAVA LEARNING CENTERE BEST JAVA FACULTY";
-		String res[]=str.split(str);
+		String strs="JLC JAVA LEARNING CENTERE BEST JAVA FACULTY";
+		String res[]=strs.split(strs);
 		
 		System.out.println(res);
-		String str1="Basha";
-		String str2="KG";
-		String str3=str1.concat(str2);//Output: BashaKG
-		System.out.println(str3);*/
+		String str4="Basha";
+		String str5="KG";
+		String str6=str4.concat(str5);//Output: BashaKG
+		System.out.println(str6);
 		
 		
 		//Intern operator
-		
-		/*String s1="Basha";
+		/*
+		String s1="Basha";
 		String s2=new String("Basha");
 		String s3=s2.intern();
 		System.out.println(s1==s2);
@@ -78,17 +78,17 @@ public class StringDemo {
 		System.out.println(s4==s5);*/
 		
 		//this snippet will give result how many chars are there in string
-		/*String s = "Basha";
+		String s = "Basha";
 		int counter = 0;
 		for( int i=0; i<s.length(); i++ ) {
-		    if( s.charAt(i) == 'w' ) {
+		    if( s.charAt(i) == 'h' ) {
 		        counter++;
 		    } 
 		}
-		System.out.println(counter);*/
+		System.out.println("Count:" +counter);
 		
 		//Program to find the repeated chars
-		/*String stng="nacbvsdfbbvdiso";
+		String stng="nacbvsdfbbvdiso";
 		Map<Character, Integer> charmap=new HashMap<Character, Integer>();
 		char[] arr=stng.toCharArray();
 		for(char value: arr){
@@ -100,7 +100,7 @@ public class StringDemo {
 				}
 			}
 		}
-		System.out.println(charmap);*/
+		System.out.println("repeated chars:" + charmap);
 		
 		//String methods
 		/*String str="I am doing Java course in JLC BTM and its best Java institute";
@@ -115,7 +115,7 @@ public class StringDemo {
 		}*/
 	
 		//Typecasting
-		int y=45;
+		/*int y=45;
 		byte b=10;
 		short s=b;
 		int a=s;
@@ -131,7 +131,7 @@ public class StringDemo {
 		char ch=(char)y;
 		byte z=(byte)y;
 		System.out.println("Cha:" +ch);
-		System.out.println("Cha:" +z);
+		System.out.println("Cha:" +z);*/
 		
 		
 		}

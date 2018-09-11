@@ -1,0 +1,22 @@
+package com.datastructerstring.examples;
+
+import java.util.Arrays;
+
+public class AddBinary {
+	
+	public static void main(String[] args){
+	
+	String str1="1010";
+	String str2="101";
+	System.out.println("Binary result:" + addBinary(str1, str2));
+	}
+
+	private static String addBinary(String str1, String str2) {
+		int num1=Integer.parseInt(str1);
+		int num2=Integer.parseInt(str2);
+		int result=num1+num2;
+		System.out.println(result);
+		return Integer.toBinaryString(result);
+	}
+	
+}

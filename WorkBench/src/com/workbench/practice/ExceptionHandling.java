@@ -91,8 +91,8 @@ public class ExceptionHandling {
 		int num2=0;
 		int result=num1/num2;
 		System.out.println(result);
-	}	}*/
-	
+	}	}
+	*/
 /*	public static void main(String[] args){
 		System.out.println("main started");
 		String data=null;

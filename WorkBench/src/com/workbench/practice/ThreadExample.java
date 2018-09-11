@@ -128,7 +128,7 @@ class MyRunnable implements Runnable{
 	}
 
 
-/////////syncrinized///
+/////////synchronized///
 	public static void main(String[] args){
 		Thread thread1=new Thread(){
 			
