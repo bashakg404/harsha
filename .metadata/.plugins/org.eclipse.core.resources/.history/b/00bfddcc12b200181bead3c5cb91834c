@@ -1,0 +1,10 @@
+Section 66**Spring REST Curd DB Real Time Project--Add Customer
+
+Here we are adding a new customer using REST
+
+POST--->Create
+GET---->READ
+PUT---->Update
+DELETE->Delete
+
+-->Jackson will convert request body from JSON to POJO

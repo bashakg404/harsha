@@ -1,0 +1,13 @@
+package com.demopractice.String;
+
+public class SubString {
+
+	public static void main(String args[]){
+		String str="CGIINDIA";
+		int len=str.length();
+		System.out.println(str.substring(3, len));
+		System.out.println(str.substring(2, len-2));
+		System.out.println(10+20+"Basha"+10+30);
+		System.out.println("Basha"+10+20+30+"Basha"+"KG");
+	}
+}

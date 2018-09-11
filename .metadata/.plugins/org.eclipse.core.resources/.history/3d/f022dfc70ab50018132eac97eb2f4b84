@@ -1,0 +1,42 @@
+package com.datastructers.examples;
+
+import java.util.Stack;
+
+public class ValidParenthesis {
+
+	public static void main(String[] args) {
+		
+		String testString="{([()])}";
+		
+		System.out.println("Status:" + checkValidity(testString));
+	}
+
+	private static boolean checkValidity(String testString) {
+		Stack<Character> stack=new Stack<>();
+		char[] arr=testString.toCharArray();
+		for(char par:arr){
+			switch(par){
+			case'{':
+				stack.push('{');
+				break;
+			case '}':
+				if(stack.isEmpty() || '{' != stack.pop()){
+					return false;
+				}
+				break;
+			
+			case '(':
+				stack.push('(');
+				break;
+			case ')':
+				if(stack.isEmpty() || '(' != stack.pop()){
+					return false;
+				}
+				break;
+			}
+		}
+		
+		return stack.isEmpty();
+	}
+
+}

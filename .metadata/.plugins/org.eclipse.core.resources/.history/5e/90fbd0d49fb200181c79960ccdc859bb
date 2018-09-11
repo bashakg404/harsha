@@ -1,0 +1,92 @@
+STRING
+
+-->String is built in and final class.
+
+-->Two ways to create String objects
+	1. Without using new operator.
+	2. Using new operator.
+
+--> If you create String without new operator, the string will be in String Constant Pool. JVM verifies String literal in the String
+	Constant Pool.
+	If String literal is not available in the pool it will create new String object inside the pool.
+	If available then existing String object address will be assigned to String reference variable
+
+--> System.out.println(s1==s2);----It will compare the address(Hashcode)
+	System.out.println(s1.equals(s2));-----It will compare the value inside the object.
+	
+--> Intern is key word which will create the string in constant string pool. If the string literal is same it will point to that
+	else it will create one more object in String Constant pool.
+	
+POLYMORPHISM
+
+-->Polymorphism is concept of java where we can perform single action in different ways.
+
+-->Two Types 1. Compile time(Method overloading)
+			 2. Run time(Method Overriding)
+
+** When we make class as a final?
+--> To prevent inheritance.
+--> A final class is simply a class which cant be extended/instantiated/subclassed.
+--> This is done for reasons of security and efficiency.
+
+** How can you convert String as an integer
+
+Ex: String str="12345";
+	int num=Integer.parseInt(str);
+	
+	Same for all other data types.
+
+Encapsulation
+
+--> Binding the data with the code that manipulates it.
+--> It keeps the data and the code safe from external interference.
+
+Dynamic Dispatch
+
+Consider the below case
+Class A{}
+Class B extends A{}
+Class C extends A{}
+Class D extends B{}
+Class E extends D{}
+
+A ob= new A(); //Valid
+A ob= new B(); //Valid
+A ob= new D(); //Valid
+B ob= new B(); //Valid
+B ob= new A(); //Invalid
+B ob= new C(); //Invalid
+B ob= new D(); //Valid
+D 0b= new A(); //Invalid
+A ob= new E(); //Valid
+					
+Method Overloading
+--> Any method can be overloaded inside the same class by changing the parameters when they have same method name.
+--> Method overloading will be at compile time(Compile time polymorphism).
+--> Its used to extend the operation.
+--> Both static and instance method can be overloaded.
+--> Return type can be anything
+
+Method Overloading
+--> It will happen in Parent and subclass.
+--> It will happen at Run time(Runtime Polymorphism).	
+--> Its used to reuse the code.
+--> Static methods cannot be overriden
+--> Return type should be same	
+
+DATABASE
+
+Find out the second highest salary
+--> select MAX(Salary) from Employee where salary<(Select MAX(Salary) from Employee);
+
+select dept names who have more than 2 employees whose salary is greater than 1000
+-->SELECT D.DeptName FROM
+Department D WHERE (SELECT COUNT(*) 
+                    FROM Employee E 
+                    WHERE E.DeptID = D.DeptID AND
+                            E.Salary > 1000) > 2
+Highest Salary in each department
+--> Select DeptId, Max(Salary) from EmpDetails Group By DeptID
+
+Write an SQL query to list Departments that have less than 3 people in it?
+

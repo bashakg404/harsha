@@ -1,0 +1,15 @@
+package com.demo.membersofclasses;
+
+public class Loops {
+
+	public static void main(String[] args) {
+		
+		int i=5; int j=10;
+		
+		for(i<3;j++<10; i++){
+			System.out.println(i +"\t" +j);
+		}
+
+	}
+
+}

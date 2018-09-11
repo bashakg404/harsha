@@ -1,0 +1,12 @@
+package com.datastructerstring.examples;
+
+public class AddBinary {
+	
+	public static void main(String[] args){
+	
+	String str1="1010";
+	String str2="101";
+	System.out.println("Binary result:" + addBinary(str1, str2));
+	}
+	
+}

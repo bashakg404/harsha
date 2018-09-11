@@ -1,0 +1,22 @@
+package com.demopractice.String;
+
+public class SubString {
+
+	public static void main(String args[]){
+		String str="CGIINDIA";
+		int len=str.length();
+		System.out.println(str.substring(3, len));
+		System.out.println(str.substring(2, len-2));
+		
+		//before string numbers will added after the String it will just add the values
+		System.out.println(10+20+"Basha"+10+30);
+		
+		System.out.println("Basha"+10+20+30+"Basha"+"KG"+10+15);
+		System.out.println(20+30+"Basha");
+		
+		String[] s1={" ","Basha", "Avi", "Pavan", "Basha"};
+		System.out.println(s1[0].length());
+		System.out.println(s1[1].equals(s1[4]));
+		
+	}
+}

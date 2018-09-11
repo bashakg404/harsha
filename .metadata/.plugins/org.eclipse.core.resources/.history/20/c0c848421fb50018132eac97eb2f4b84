@@ -1,0 +1,17 @@
+package com.datastructers.examples;
+
+public class PatternStar {
+
+	public static void main(String[] args) {
+	
+		int n=5;
+	(printStars(n));
+		
+	}
+
+	private static void printStars(int n) {
+		
+		int i, j;
+		
+	}
+	}

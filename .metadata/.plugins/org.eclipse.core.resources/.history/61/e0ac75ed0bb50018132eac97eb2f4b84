@@ -1,0 +1,17 @@
+package com.datastructers.examples;
+
+public class RemoveVowels {
+
+	public static void main(String[] args) {
+		String str="Basha Gudimani";
+		String Str1="Sa Hi Pra School";
+		System.out.println("Output:" + removeVowels(str));
+	}
+
+	private static String removeVowels(String str) {
+		String result=str1.replaceAll("[a, i, ra]", "");
+		
+		return result;
+	}
+
+}

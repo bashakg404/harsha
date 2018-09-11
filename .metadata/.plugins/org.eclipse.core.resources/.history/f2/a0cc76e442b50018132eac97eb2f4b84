@@ -1,0 +1,36 @@
+package com.demopractice.String;
+
+public class StringAddDemo {
+
+	public static void main(String[] args) {
+		//add method
+		String str="JLC99";
+		final String str1="JLC";
+		final String str2="99";
+		String str3=str1+str2;
+		System.out.println(str3);
+		System.out.println(str1==str3);
+		System.out.println(str.equals(str3));
+		String str4="JLC"+99;
+		System.out.println(str3.equals(str4));
+		//concat method
+		String s1="JLC";
+		String s2="INDIA";
+		String s3=s1.concat(s2);
+		System.out.println(s3);
+		String s4="JLCINDIA";
+		System.out.println(s3==s4);
+		System.out.println(s3.equals(s4));
+		
+		//indeex of method
+		String st="Hi Anjali, How are you, Had your dinner";
+		System.out.println(st.indexOf(110));
+		System.out.println(str.indexOf('n'));
+		
+		//matches method
+		String exp="[A-Z]*";
+		System.out.println("b".matches(exp));
+		
+	}
+
+}

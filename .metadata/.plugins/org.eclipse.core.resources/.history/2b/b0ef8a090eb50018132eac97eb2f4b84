@@ -1,0 +1,19 @@
+package com.datastructers.examples;
+
+public class ReverseOrderOfString {
+
+	public static String main(String[] args) {
+
+		String reverseEach(String inputString) {
+			  String[] parts = inputString.split(" ");
+			  StringBuilder sb = new StringBuilder();
+			  for (String p : parts) {
+			    sb.append(new StringBuffer(p).reverse().toString());
+			    sb.append(' ');
+			   }
+			   return sb.toString();
+			}
+		
+	}
+
+}

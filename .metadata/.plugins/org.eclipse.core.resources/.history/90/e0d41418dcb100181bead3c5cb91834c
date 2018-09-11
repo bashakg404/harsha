@@ -1,0 +1,35 @@
+package com.demo.membersofclasses;
+
+public class VariablesInitialization {
+
+	public static void main(String[] args) {
+		
+		Hello h=new Hello();
+		h.m1();
+
+	}
+
+}
+
+class Hello{
+	static final int a;
+	
+	static{
+		a=4;
+		System.out.println("Static block");
+		System.out.println(a);
+		
+	}
+	
+	Hello(){
+		a=10;
+		System.out.println("In Constructor");
+		System.out.println(a);
+	}
+	
+	public void m1(){
+		a=a+1;
+		System.out.println("Method");
+		System.out.println(a);
+	}
+}
