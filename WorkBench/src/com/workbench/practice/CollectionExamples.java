@@ -1,7 +1,7 @@
 package com.workbench.practice;
 
-import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class CollectionExamples {
 	
@@ -14,7 +14,7 @@ public class CollectionExamples {
 		arraylist.add("spring");
 		Iterator iterator=arraylist.iterator();
 		while(iterator.hasNext()){
-			System.out.println(iterator.next()); //it will print all the strings
+			System.out.println("iterator: "+iterator.next()); //it will print all the strings
 		
 		System.out.println("arraylist:" +arraylist);
 		
@@ -135,11 +135,12 @@ public class CollectionExamples {
 	}
 	*/
 	////unmodifiable list//////
-/*	public static void main(String[] args){
+	/*public static void main(String[] args){
 		List<String> arraylist=new ArrayList<String>();
 		arraylist.add("cgi");
 		arraylist.add("tcs");
 		arraylist.add("ibm");
+		//it will not allow to modify the given objecct ie arraylist
 		List<String> unmodifiableList=Collections.unmodifiableList(arraylist);
 		System.out.println(arraylist);
 		arraylist.add("wipro");
@@ -578,7 +579,7 @@ class Student{
 
 
 	////map, hashmap, linked hashmap, Tree map////////////
-/*	public static void main(String args[]){
+	/*public static void main(String args[]){
 		//Map<Integer, Book> map=new HashMap<Integer, Book>();///Hash map no ordere
 		//Map<Integer, Book> map=new LinkedHashMap<Integer, Book>();//Linked Hashmap maintains insertion oredr
 		Map<Integer, Book> map=new TreeMap<Integer, Book>();//TreeMap irrespective of input it will maintain Ascending 
@@ -611,8 +612,8 @@ class Student{
 			this.publisher=publisher;
 			this.author=author;
 			this.quantity=quantity;
-		}}
-*/	
+		}}*/
+	
 		
 ////Queue Interface////////
 /*	public static void main(String args[]){
@@ -766,4 +767,5 @@ class Student{
 	map.put(1, "Azure");
 	System.out.println(map.get(1));
 }}*/
+
 }

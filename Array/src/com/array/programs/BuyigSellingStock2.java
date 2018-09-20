@@ -8,7 +8,7 @@ public class BuyigSellingStock2 {
 	 *  that can be gained, if multiple transactions are allowed
 	 */
 
-		/*
+		
 		public static void main(String[] args) {
 			int[] stockPrice = {100, 80, 120, 130, 70, 60, 100, 125};
 			
@@ -32,13 +32,14 @@ public class BuyigSellingStock2 {
 			}
 			return profit;
 		}
-}*/
+}
 
 
 
 //write a program to find a profitable share price in array//
 
- public static void main(String[] args){
+/* public static void main(String[] args){
+	
     int arr[]={23, 12, 286, 47, 63, 39};
    
     System.out.println("MaxProfitShare:" + findMaxProfit(arr));
@@ -58,5 +59,5 @@ public class BuyigSellingStock2 {
     return profit;
 }
 }
-
+*/
 

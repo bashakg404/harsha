@@ -1,4 +1,4 @@
-package com.array.programs;
+package com.datastructerstring.examples;
 
 
 public class FindDupllicateNumberInArray {

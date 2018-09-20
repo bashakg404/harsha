@@ -11,17 +11,17 @@ public static void main(String args[]){
 	}	
 
 
-	void run(){
+	 void run(){
 		System.out.println("running");
 	}
 }
 	class Pulsar extends Bike{
-		void run(){
+		 void run(){
 			System.out.println("Pulsar is running safely with 60kmpl");
 		}
 
 }
 	
-	
+	//if you make method as static it will not over ride the method which you have defined in extended class i.e Pulsar
 
 

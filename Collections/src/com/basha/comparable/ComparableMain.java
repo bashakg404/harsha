@@ -14,7 +14,6 @@ public class ComparableMain {
 		Player smith=new Player("Steven Smith", 4, 30, "Australia");
 		Player williamson=new Player("Kane Williamson", 3, 28, "NewZealand");
 		Player elgar=new Player("Dean Elgar", 5, 28, "South Aftrica");
-		
 		List<Player> listPlayer=new ArrayList<>();
 		listPlayer.add(kohli);
 		listPlayer.add(root);
@@ -24,6 +23,8 @@ public class ComparableMain {
 		
 		Collections.sort(listPlayer);
 		System.out.println(listPlayer);
+		
+		
 	}
 
 }

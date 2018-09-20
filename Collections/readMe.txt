@@ -101,7 +101,7 @@ So after some values here is the table looks like
 			DANGAL			6
 			BAHUBALI		8
 			
-SO now imagine someone comes up and shows you a name and says "please retrieve the the piece of paper that matches this name"
+So now imagine someone comes up and shows you a name and says "please retrieve the the piece of paper that matches this name"
 So you look at the name they show you, and run the same hashcode-generating algorithm. The hashcode tells you which bucket you 
 should look to find the same.
 

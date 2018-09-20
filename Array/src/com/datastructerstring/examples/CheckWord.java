@@ -9,7 +9,8 @@ public class CheckWord {
 		boolean result=isHarsha(standard, test);
 		System.out.println("is Strings Harsha:" + result);
 		
-		
+		//using java api
+		//System.out.println(test.contains(standard));
 	}
 
 	private static boolean isHarsha(String str1, String str2) {
@@ -22,11 +23,13 @@ public class CheckWord {
 		
 		for(int i=0; i<str1.length(); i++){
 			char x=str1.charAt(i);
+			
 			charArray1[x]++;
 		}
 		
 		for(int i=0; i<str2.length(); i++){
 			char x=str2.charAt(i);
+			
 			charArray2[x]++;
 		}
 		

@@ -9,7 +9,7 @@ public class StringAddDemo {
 		final String str1="JLC";
 		final String str2="99";
 		String str3=str1+str2;
-		System.out.println(str3);
+		System.out.println("str3:" +str3);
 		System.out.println(str1==str3);
 		System.out.println(str.equals(str3));
 		String str4="JLC"+99;

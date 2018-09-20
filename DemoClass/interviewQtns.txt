@@ -6,8 +6,8 @@ STRING
 	1. Without using new operator.
 	2. Using new operator.
 
---> If you create String without new operator, the string will be in String Constant Pool. JVM verifies String literal in the String
-	Constant Pool.
+--> If you create String without new operator, the string will be in String Constant Pool. JVM verifies String literal 
+in the String Constant Pool.
 	If String literal is not available in the pool it will create new String object inside the pool.
 	If available then existing String object address will be assigned to String reference variable
 
@@ -74,6 +74,16 @@ Method Overloading
 --> Static methods cannot be overriden
 --> Return type should be same	
 
+INTEERFACE and ABSTRACT
+
+-->You can implement interface using class but you cannot do it using another interface. So a class can implement interface 
+	and an other interface can extend the interface.
+-->Interface is used
+	Achieve the multiple inheritance
+	Achieve Loose coupling
+	Achieve Abstraction
+-->You cannot create an object for Abstract class, it can be sub classed.
+
 DATABASE
 
 Find out the second highest salary
@@ -88,5 +98,24 @@ Department D WHERE (SELECT COUNT(*)
 Highest Salary in each department
 --> Select DeptId, Max(Salary) from EmpDetails Group By DeptID
 
+**SPRING**
+
+**class A scope is prototype and inside that i have one object of which is type of B class when i create the object for class A 
+what will be the scope of type of B
 
 
+**HIBERNATE**
+
+**what is merge and update in hibernate
+
+saveOrUpdate--> Calls either save or update depending on some checks. E.g. if no identifier exists, save is called. 
+Otherwise update is called.
+
+save--> Persists an entity. Will assign an identifier if one doesn't exist. If one does, it's essentially doing an update. 
+Returns the generated ID of the entity.
+
+update--> Attempts to persist the entity using an existing identifier. If no identifier exists, I believe an exception is thrown.
+
+saveOrUpdateCopy--> This is deprecated and should no longer be used. Instead there is..
+
+merge-->

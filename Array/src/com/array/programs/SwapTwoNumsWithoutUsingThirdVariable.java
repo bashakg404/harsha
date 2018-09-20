@@ -9,7 +9,7 @@ public class SwapTwoNumsWithoutUsingThirdVariable {
 		n2=n1-n2
 		n1=n1-n2*/
 		
-		int n1=10, n2=20;
+		int n1=101, n2=202;
 		System.out.println("before swapping n1=" + n1 +"and n2=" +n2);
 		n1=n1+n2;
 		n2=n1-n2;

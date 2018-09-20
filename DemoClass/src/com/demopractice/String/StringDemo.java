@@ -18,9 +18,9 @@ public class StringDemo {
 		String st3="Basha";
 		System.out.println(st1);
 
-		System.out.println(st1);
+		System.out.println(st2);
 
-		System.out.println(st1);
+		System.out.println(st3);
 		
 		System.out.println(st1==st2);
 

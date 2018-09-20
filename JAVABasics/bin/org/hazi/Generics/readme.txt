@@ -15,7 +15,8 @@ list.add("hello");
 String s = list.get(0);   // no cast
 
 -->Stronger type checks at compile time.
-A Java compiler applies strong type checking to generic code and issues errors if the code violates type safety. Fixing compile-time errors is easier than fixing runtime errors, which can be difficult to find.
+A Java compiler applies strong type checking to generic code and issues errors if the code violates type safety. 
+Fixing compile-time errors is easier than fixing runtime errors, which can be difficult to find.
 
 -->Look at the class Team.java, there we could see the type parameter for class. 
 			e.g: public class Team<T> or public class Team<T extends Player>
